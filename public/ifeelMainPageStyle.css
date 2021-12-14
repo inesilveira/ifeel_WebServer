@@ -59,17 +59,25 @@ nav {
    font-family: 'Encode Sans','Roboto',sans-serif;
    font-weight: 300;
    position: absolute;
-   font-size: 100px;
+   font-size: 110px;
    line-height: 186px;
    display: inline-block; 
    text-align: left;
    
    width: 1167px;
    height: 618px;
-   left: 149px;
-   top: 256px;
+   left: 20%;
+   top: 180px;
+   background-color: none;
  
 }
+/* .posPrompt{
+  position: absolute;
+  
+}
+ */
+
+
 .verticalLine{
   margin-left: 1440px;
   position: absolute;
@@ -83,12 +91,12 @@ html {
   position: absolute;
   height: 72px;
   width: 1300px;
-  left: 80px;
+  left: 11%;
   top: 1100px;
   
   font-family: 'Encode Sans','Roboto',sans-serif;
   font-weight: 300;
-  font-size: 45px;
+  font-size: 34px;
   line-height: 80px;
   text-align: left;
 
@@ -105,7 +113,7 @@ html {
 .grid-container {
   position: absolute;
   top: 1200px;
-  left: 80px;
+  left: 11%;
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
   grid-template-rows: 300px 300px 300px 300px;
@@ -137,7 +145,7 @@ html {
 /*/------------------- REFRESH BUTTON -------------------/*/
 .refresh {
   position: absolute;
-  left: 20px;
+  left: 125px;
   top: 1115px;
   width: 50px;
   height: 50px;
@@ -176,6 +184,18 @@ html {
   cursor: pointer;
 }
 
+/* .dropbtn {
+  top: 0px;
+  left: 0px;
+
+  padding: 25px;
+  margin-left: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+} */
+
 /* Dropdown button on hover*/
 .dropbtn:hover, .dropbtn:focus {
   background-color: none;
@@ -203,11 +223,12 @@ html {
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
-  left: 80px;
+  left: 11;
   top: 1099px;
   display: inline-block;
   line-height: 20px;
   z-index: 3;
+  border-radius: 6px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -216,6 +237,7 @@ html {
   position: absolute;
   min-width: 1290px;
   border: 1px solid #6f6f6f;
+  border-radius: 6px;
   z-index: 3;
 }
 
@@ -228,6 +250,7 @@ html {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  border-radius: 6px;
   
 }
 
@@ -265,7 +288,7 @@ html {
 }
 .close {
   position: absolute;
-  top: 0;
+  top: 0px;
   right: 8px;
   font-size: 24px;
   transform: rotate(45deg);

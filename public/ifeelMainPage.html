@@ -34,16 +34,18 @@
 <!------------ BODY - MAIN TEXT ON SCREEN - PROMPT ----------->
 
   <body>
-    <hr class="verticalLine" width="2" size="10800">
-    <div class="Prompt">
-      <!-- This is the * Main Prompt * on the landing page!!!!!!-->
-      <h1>DRAW HOW <br />
-        YOU FEEL <br />
-        TODAY ... <br />
-      </h1>
+    <!-- <hr class="verticalLine" width="2" size="10800"> -->
+    
+    <div class="posPrompt">
+      <div class="Prompt">
+          <!-- This is the * Main Prompt * on the landing page!!!!!!-->
+          <h1>HOW <br />
+            YOU FEEL <br />
+            TODAY ... <br />
+          </h1>
+      </div>
     </div>
 
-    
   <!----------  BODY - AFTER SCROLL ----------->
 
     <button class="refresh" onClick="window.location.reload();"></button>
@@ -51,11 +53,9 @@
 
 
     <div class="secondPrompt">
-      <!--The current prompt selected on the main page, after scroll.-->
-      <h2>DRAW HOW YOU FEEL TODAY...</h2>
+      <h2 id="promptToChange">HOW YOU FEEL TODAY...</h2>
       <button onclick="myFunction()" class="dropbtn"></button>
     </div>
-
 
   <!----------- BODY - DROPDOWN MENU  ------------>
 
@@ -65,16 +65,16 @@
       <div id="myDropdown" class="dropdown-content">
         <!--the prompts!!!-->
         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-        <a href="#prompt1">Draw how you feel today.</a>
-        <a href="#prompt2">Draw your good traits.</a>
-        <a href="#prompt3">Draw yourself in the past, present and future.</a>
-        <a href="#prompt4">Describe your day using colors.</a>
-        <a href="#prompt5">Draw something that you love.</a>
-        <a href="#prompt6">Draw a problem that you are currently dealing with.</a>
-        <a href="#prompt7">Draw the positive things in your life.</a>
-        <a href="#prompt8">Draw something that frustrates/annoys you.</a>
-        <a href="#prompt9">Draw something that you feel is missing within you.</a>
-        <a href="#prompt10">Draw something you would do if you weren’t scared.</a>
+        <a onclick="changePrompt(); myFunction()"; id="prompt">HOW YOU FEEL TODAY.</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">YOUR GOOD TRAITS.</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">YOURSELF IN THE PAST, PRESENT, AND FUTURE.</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">YOUR DAY USING COLORS.</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">SOMETHING THAT YOU LOVE.</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">A PROBLEM THAT YOU ARE CURRENTLY DEALING WITH.</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">THE POSITIVE THINGS IN YOUR LIFE..</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">SOMETHING THAT FRUSTRATES/ANNOYS YOU.</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">SOMETHING THAT IS MISSING WITHIN YOU.</a>
+        <a onclick="changePrompt(); myFunction()" id="prompt">SOMETHING YOU WOULD DO IF YOU WEREN'T SCARED.</a>
       </div>
     </div>
 
@@ -91,7 +91,7 @@
     <div class="modal-content" id="modal-content">
       <!--This is the pop-up-->
 
-      <div class="close" onclick="closeImage()">+</div>
+      <button class="close" onclick="closeImage()">+</div>
       <!--Close pop-up-->
 
 </html>

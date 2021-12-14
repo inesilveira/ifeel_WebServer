@@ -25,6 +25,26 @@ function filterFunction() {
   }
 }
 
+function changePrompt(){
+
+  var hasbeenclicked = true
+
+  document.addEventListener('click', function(e) {
+
+    if(document.getElementById('prompt').id == 'prompt' & hasbeenclicked == true){
+
+      e = e || window.event;
+      var target = e.target,
+      text = target.innerText;
+      document.getElementById('promptToChange').innerHTML = text; 
+      
+      hasbeenclicked = false;
+
+    } 
+
+  }, false);
+}
+
 //Image Array to store images that are displayed on the main page.
 const imageArray =["url('img/Hoodie1_Black.png')","url('img/Hoodie1_White.png')" , "url('img/Hoodie1_Beige.png')"];
 

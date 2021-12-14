@@ -30,7 +30,7 @@ window.onload=function(){
   document.getElementById('colorChange').addEventListener('change', function(){
     context.strokeStyle = document.getElementById('colorChange').value;
   }, false);
-  
+
   
   //Save
   // document.getElementById('btnSave').addEventListener('click', function(){
@@ -138,3 +138,29 @@ function filterFunction() {
 
 }
 
+function changePrompt(){
+
+  var hasbeenclicked = true
+
+  document.addEventListener('click', function(e) {
+
+    if(document.getElementById('prompt').id == 'prompt' & hasbeenclicked == true){
+
+      e = e || window.event;
+      var target = e.target,
+      text = target.innerText;
+      document.getElementById('promptToChange').innerHTML = text; 
+      
+      hasbeenclicked = false;
+
+    } 
+
+  }, false);
+
+
+   
+  //document.getElementById('promptToChange').innerHTML= prompt.innerText; 
+                                                      //document.getElementById('prompt1').innerText;
+
+
+}

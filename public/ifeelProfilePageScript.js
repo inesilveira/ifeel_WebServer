@@ -18,7 +18,7 @@ var objArray = [
     "image": "url('img/testimg2.jpg",
     "id": 3,
     "date": "November 21th, 2021",
-    "tags": ["happy"]
+    "tags": ["sad"]
   },  
 ] 
 
@@ -58,6 +58,10 @@ window.onload = function() {
     objArray.push(newPost);
   }
 
+  for(let i = 0; i < imgArray.length; i++){
+    document.getElementById(i+1).style.backgroundImage = imgArray[i];
+  }
+
 }; 
 
 //---------FUNCTION TO CLEAR THE FILTERS--------------------
@@ -75,6 +79,7 @@ function replyClick(clicked_id){
   currentId = clicked_id;
   document.getElementById("popupImg").style.backgroundImage = imgArray[clicked_id - 1];
   document.getElementById("dateTxt").textContent = dateArray[clicked_id - 1];
+  document.getElementById("tagsTxt").textContent = objArray[clicked_id - 1].tags;
 }
 
 
