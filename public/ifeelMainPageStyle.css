@@ -114,11 +114,12 @@ html {
   position: absolute;
   top: 1200px;
   left: 11%;
+  /* padding:40px; */
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
   grid-template-rows: 300px 300px 300px 300px;
-  row-gap: 30px;
-  column-gap: 30px;
+  row-gap: 40px;
+  column-gap: 40px;
   z-index: 1;
  
   
@@ -136,10 +137,17 @@ html {
   height: 300px;
   width: 300px;
   cursor: pointer;
+  
+  /* -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out; */
+  transition: all 0.3s ease-in-out;
   }
 
   .grid-item:hover{
     transform: scale(1.1);
+
   }
 
 /*/------------------- REFRESH BUTTON -------------------/*/
@@ -157,7 +165,7 @@ html {
   border-radius: 50%;
   cursor: pointer;
 
-  transition-duration: 0.4s;
+
 }
 .refresh:hover {
   background-color: none;
