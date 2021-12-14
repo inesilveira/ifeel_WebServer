@@ -1,0 +1,501 @@
+
+/*-------------------------------------------------------- GLOBAL CSS ----------------------------------------------------------*/
+
+.holepage{
+    position: relative;
+    left: 2.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+/*-------------------------------------------------------- NAV BAR CSS ----------------------------------------------------------*/
+
+header {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 60px;
+}
+
+.logo{
+    cursor: pointer;
+    margin-left:2%;
+    margin-right: auto;
+}
+
+nav {
+    order: 1;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding-right: 32px;
+}
+
+.nav__links li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #6F6F6F;
+    text-decoration: none;
+    transition: all 0.03s ease 0s;
+}
+
+.start{
+    font-weight: bold;
+}
+
+.nav__links li a:hover{
+    color: #464646;
+}
+
+/*-------------------------------------------------------- TITLE and PROMPT CSS ----------------------------------------------------------*/
+
+/* parent for title and prompt */
+.textAndPrompt{
+    position: relative;
+    margin-top: 110px;
+    margin-left: 28.2638%;
+}
+
+/* css for the title */
+.title h1{
+    font-family: 'Encode Sans', sans-serif;
+    font-size: 84px; 
+    position: absolute;
+    font-weight: 500;
+    z-index: 1;
+    color: #3D3D3D;
+}
+
+/* -------------------------- css for the dropdown menu --------------------------------*/
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    margin-top: 100px;
+    
+    display: inline-block;
+    line-height: 20px;
+    z-index: 3;
+}
+
+.dropbtn {
+    top: 0px;
+    left: 0px;
+
+    width: 600px;
+    height: 45px;
+
+    text-align: left;
+    /* float: inline-start; */
+    display:flex;
+    
+    /* background-image: url('img/searchicon.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 48px 30px; */
+    padding: 10px;
+
+    font-size: 26px;
+    color: #6F6F6F;
+
+    border: none;
+    cursor: pointer;
+
+    /* transition-duration: 0.4s; */
+}
+#dropdownimg{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/* Dropdown button on hover & focus */
+/* .dropbtn:hover, .dropbtn:focus {
+    background-color: none;
+    border-bottom: solid;
+    border-color: #3d3d3d;
+} */
+
+/* The search field */
+#myInput {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    background-image: url('img/searchicon.png');
+    background-position: 14px 12px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    width: 630px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 0px solid #ddd;}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 630px;
+    border: 1px solid #6f6f6f;
+    z-index: 3;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #6F6F6F;
+    font-size: 26px;
+    font-family: 'Roboto',sans-serif;
+    text-align: left;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #acacac}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+  /* -------------------------- css for the dropdown menu --------------------------------/
+/* 
+   The container <div> - needed to position the dropdown content 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 28.2638%;
+  }
+
+   Dropdown Content (Hidden by Default) 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 160px;
+
+
+    z-index: 1;
+  }
+
+  .dropbtn {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    color: #464646;
+    font-size: 36px;
+    margin-top: 210px;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+
+   Links inside the dropdown 
+  .dropdown-content a {
+    font-family: 'Roboto', sans-serif;
+    color: #6F6F6F;
+    margin-top: 12px;
+    text-decoration: none;
+    display: block;
+  }
+
+   Change color of dropdown links on hover 
+  .dropdown-content a:hover {background-color: #EDF0F1}
+
+   Show the dropdown menu on hover 
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+   Change the background color of the dropdown button when the dropdown content is shown 
+  .dropdown:hover .dropbtn {
+    background-color: #FFFFFF;
+  } */
+
+/*-------------------------------------------------------- DRAWING BUTTONS CSS ----------------------------------------------------------*/
+
+.canvasAndTools{
+    position: relative
+
+}
+
+.controls{
+    margin-top: 70px;
+    margin-left: 22.222222222222222222222222222222%;
+}
+
+#colorpicker{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 100px;
+    /* margin-left: 320px; */
+    border-radius: 100%;
+    border: none;
+
+    background-color: black;
+}
+
+#colorpicker:hover{
+    outline: 1px solid #000000;
+}
+
+.pencil{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 150px;
+    /* margin-left: 320px; */
+    border-radius: 100%;
+    border: none;
+
+    background-position: center center;
+    background:url(img/pencil.png) no-repeat;
+}
+
+.pencil:hover{
+    outline: 1px solid #000000;
+}
+
+.bucket{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 210px;
+    /* margin-left: 320px; */
+    border-radius: 100%;
+    border: none;
+
+    background-position: center center;
+    background:url(img/bucket.png) no-repeat;
+}
+
+.bucket:hover{
+    outline: 1px solid #000000;
+}
+
+.erasor{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 280px;
+    /* margin-left: 320px; */
+    border-radius: 100%;
+    border: none;
+
+    background-position: center center;
+    background:url(img/erasor.png) no-repeat;
+}
+
+.erasor:hover{
+    outline: 1px solid #000000;
+}
+
+#backward{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 440px;
+    /* margin-left: 320px; */
+    border-radius: 100%;
+    border: none;
+
+    background-position: center center;
+    background:url(img/backward.png) no-repeat;
+}
+
+#backward:hover{
+    outline: 1px solid #000000;
+}
+
+.forward{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 510px;
+    /* margin-left: 320px; */
+    border-radius: 100%;
+    border: none;
+
+    background-position: center center;
+    background:url(img/forward.png) no-repeat;
+}
+
+.forward:hover{
+    outline: 1px solid #000000;
+}
+
+#trash{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 580px;
+    /* margin-left: 320px; */
+    border-radius: 100%;
+    border: none;
+
+    background-position: center center;
+    background:url(img/trash.png) no-repeat;
+}
+
+#trash:hover{
+    outline: 1px solid #000000;
+}
+
+
+.submit{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    margin-left: 42%;
+    margin-top: 600px;
+    
+    color: #6f6f6f;
+    font-size: 18px;
+
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+.save{
+    text-decoration: none;
+    position: absolute;
+    margin-left: 48.5%;
+    margin-top: 610px;
+    font-family: 'Roboto', sans-serif;
+    color: #6f6f6f;
+    font-size: 18px;
+}
+
+/*-------------------------------------------------------- DRAWING CANVAS CSS ----------------------------------------------------------*/
+/* .drawingcanvas{
+    position: absolute;
+    margin-top: 24px;
+    margin-left: 407px;
+    border-radius: 4px;
+    outline: 2px solid #cfcfcf; 
+} */
+
+#myCanvas{
+    position: absolute;
+    margin-top: 24px;
+    margin-left: 28.263888888888888888888888888889%;
+    border-radius: 4px;
+    outline: 2px solid #cfcfcf; 
+}
+
+
+/*-------------------------------------------------------- OVERLAY -----------------------------------------------------------------------*/
+
+#overlay {
+    box-sizing: border-box;
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    z-index: 1000;
+}
+
+#contentOverlay{
+    width: 750px;
+    height: 750px;
+    background-color: white;
+    margin-left: 520px;
+    margin-top: 100px;
+    border-radius: 6px;
+}
+
+#closingButton{
+
+}
+
+#submitTitle{
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 300;
+    color: #6f6f6f;
+    font-size: 36px;
+    margin-left: 5.5%;
+    padding-top: 40px;
+    position: absolute;
+}
+
+#submitDescription{
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 300;
+    color: #6f6f6f;
+    font-size: 18px;
+    margin-left: 5.5%;
+    margin-top: 100px;
+    position: absolute;
+}
+
+#drawToUpload{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(250, 211, 211);
+    outline-width: 1px;
+    outline-color: #6f6f6f;
+    margin-left: 175px;
+    margin-top: 175px;
+    border-radius: 6px;
+}
+
+#submitFinal{
+    width: 120px;
+    height: 40px;
+    margin-top: 70px;
+    margin-left: 40%;
+    border-radius: 6px;
+    border-style: solid;
+    outline-width: 1px;
+    outline-color: #6f6f6f;
+}
+
+#submitFinal p{
+    font-family:'Roboto', sans-serif;
+    color: #6f6f6f;
+    font-size: 18px;
+    flex: 1;
+}
+
+#cancelButton{
+    font-family:'Roboto', sans-serif;
+    color: #6f6f6f;
+    font-size: 18px;
+    bottom: 0px;
+    flex: 1;
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
+#b{
+    font-weight: 500;
+}

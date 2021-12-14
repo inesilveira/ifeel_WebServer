@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Page</title>
+        <link rel="StyleSheet" type="text/css" href="ifeelProfileStyle.css">
+        <script src="ifeelProfilePageScript.js"></script>  
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans|Roboto">
+    </head>
+
+    <body>
+        <main id="maincontainer ">
+
+
+            <!--------------------------------------------------- NAV BAR HTML ------------------------------------------------------->
+            <header>
+        
+                <a href="ifeelMainPage.html" class="logo"> <img src="img/ifeel.png" alt="logo" width="80" height="35"/> </a>
+
+                <nav>
+                    <ul class="nav__links">
+                        <li><a href="ifeelAboutPage.html">about us</a></li>
+                        <li><a href="ifeelProfilePage.html">log in</a></li>
+                        <li><a class="start" href="ifeelDrawingPage.html">start drawing</a></li>
+                    </ul>
+                </nav>
+        
+            </header>
+    
+            <!--------------------------------------------------- BODY HTML ------------------------------------------------------->
+
+            <!--------USERS NAME--------->
+
+            <div class="identifier" id="new">
+                <h1>Jack Sparrow</h1>
+            </div>
+            
+            <!--------DROPDOWN MENUS--------->
+
+            <div class="menus">
+                <div class="menu1">
+                    <label for="prompt"></label>
+                        <select name="prompt" id="prompt">
+                            <option value="feel" selected>Draw how you feel today...</option>
+                            <option value="past">Draw your past...</option>
+                            <option value="calming colours">Use colours that calm you...</option>
+                            <option value="energy">Draw your energy...</option>
+                        </select>
+                </div>
+                <div class="menu2">
+                    <label for="tags"></label>
+                    <select name="tags" id="tags">
+                        <option value="#tag" selected>#Tag</option>
+                        <option value="happy">Happy</option>
+                        <option value="dark">Dark</option>
+                        <option value="calming">Calming</option>
+                        <option value="nostalgic">Nostalgic</option>
+                    </select>     
+                </div>
+
+                <!--------BUTTON TO CLEAR THE FILTERS--------->
+                <a class="clear" onclick="changeSelected()">Clear Filter</a> 
+                
+
+        
+                <!--------FEED IMAGES (GRID)--------->
+
+                <div class="grid-container" id="Container">
+                    <div class="grid-item" onclick="showPop(); replyClick(this.id)" id=1>1</div>
+                </div>
+                
+            </div>
+            
+            <!--------BUTTON TO LOAD THE IMAGES (TEMPORARY)--------->
+            <button class="imgBut" onclick="changeBackground()">Load Images</button>
+
+
+            <!--------POPUP WINDOW--------->
+
+             <!--
+            <div class="popup">
+                <span class="popuptext" id="myPopup">A simple Popup!</span>
+            </div>
+            -->
+            
+            <!-- Trigger/Open The Modal -->
+
+            <div class="popup" id="square1">
+                <div class="popupImgContainer">
+                    <div class="popImg" id="popupImg"></div>
+                </div>
+                <div class="popupContentAbt">
+
+                    <div class="text">
+                        <h1 id="dateTxt"></h1>
+                        <h2 id="pptTitle">Prompt:</h2>
+                        <p id="promptTxt"></p>
+                        <h2 id="tgsTitle">#Tags:</h2>
+                        <p id="tagsTxt"></p>
+                        <h2 id="pstTitle">Post on feed</h2>
+                    </div>
+
+                    <button id="closePop" onclick="closePop()"></button>
+                    <button id="savePop">Save</button>
+                    <button id="submitPop">Submit</button>
+
+                    
+
+                </div>
+                
+            </div>
+
+            <!-- The Modal 
+
+            <div id="myModal" class="modal">
+                 
+                <div class="modal-content">
+                  <span class="close" onclick="spanClick()">&times;</span>
+                  <p>This is a popup!</p>
+                </div>
+
+            </div>
+            -->
+
+              <!------------JAVASCRIPT EXPERIMENT--------------->
+            <div id="box">                
+                <!-- empty -->
+            </div>
+
+        </main>
+    </body>
+</html>

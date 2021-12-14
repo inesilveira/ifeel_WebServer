@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- | This is the ifeel Main Page Html File |-->
+
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <title>ifeel</title>
+
+    <link rel="stylesheet" type="text/css" href="ifeelMainPageStyle.css" />
+    <script src="ifeelMainPageScript.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap');
+    </style>
+
+  </head>
+ 
+<!--------------- HEADER - NAVIGATION BAR ------------------>
+  <header>
+    <a href="ifeelMainPage.html" class="logo"> <img src="img/ifeel.png" alt="logo" width="80" height="35" /> </a>
+
+    <nav>
+      <ul class="nav__links">
+        <li><a href="ifeelAboutPage.html">about us</a></li>
+        <li><a href="ifeelProfilePage.html">log in</a></li>
+        <li><a class="start" href="ifeelDrawingPage.html">start drawing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!------------ BODY - MAIN TEXT ON SCREEN - PROMPT ----------->
+
+  <body>
+    <hr class="verticalLine" width="2" size="10800">
+    <div class="Prompt">
+      <!-- This is the * Main Prompt * on the landing page!!!!!!-->
+      <h1>DRAW HOW <br />
+        YOU FEEL <br />
+        TODAY ... <br />
+      </h1>
+    </div>
+
+    
+  <!----------  BODY - AFTER SCROLL ----------->
+
+    <button class="refresh" onClick="window.location.reload();"></button>
+    <!--Currently this just refreshes the page. Eventually it should randomize prompt-->
+
+
+    <div class="secondPrompt">
+      <!--The current prompt selected on the main page, after scroll.-->
+      <h2>DRAW HOW YOU FEEL TODAY...</h2>
+      <button onclick="myFunction()" class="dropbtn"></button>
+    </div>
+
+
+  <!----------- BODY - DROPDOWN MENU  ------------>
+
+    <div class="dropdown">
+      <!--contains everything related to the dropdown-->
+
+      <div id="myDropdown" class="dropdown-content">
+        <!--the prompts!!!-->
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+        <a href="#prompt1">Draw how you feel today.</a>
+        <a href="#prompt2">Draw your good traits.</a>
+        <a href="#prompt3">Draw yourself in the past, present and future.</a>
+        <a href="#prompt4">Describe your day using colors.</a>
+        <a href="#prompt5">Draw something that you love.</a>
+        <a href="#prompt6">Draw a problem that you are currently dealing with.</a>
+        <a href="#prompt7">Draw the positive things in your life.</a>
+        <a href="#prompt8">Draw something that frustrates/annoys you.</a>
+        <a href="#prompt9">Draw something that you feel is missing within you.</a>
+        <a href="#prompt10">Draw something you would do if you weren’t scared.</a>
+      </div>
+    </div>
+
+  <!------------ BODY - GRID PLACEHOLDER IMAGE ------------>
+    <div class="grid-container" id="container">
+      <div class="grid-item" onclick="clickImage(); replyClick(this.id)" id=1>1</div>
+    </div>
+  </body>
+
+  <!-------------- CLICKABLE IMAGES ---------------->
+  <div class="bg-modal" id="pop">
+    <!--This is the background which contains everything else related to the pop-up (parent)-->
+
+    <div class="modal-content" id="modal-content">
+      <!--This is the pop-up-->
+
+      <div class="close" onclick="closeImage()">+</div>
+      <!--Close pop-up-->
+
+</html>

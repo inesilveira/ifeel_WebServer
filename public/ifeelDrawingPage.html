@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drawing Page</title>
+        <link rel="stylesheet" href="ifeelDrawingPageStyle.css">
+        <link rel="javascript" href="ifeelDrawingPageScript.js">
+
+        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        <script  src="ifeelDrawingPageScript.js" defer></script>   
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+        </style>
+    </head>
+
+
+    <!--------------------------------------------------- NAV BAR HTML ------------------------------------------------------->
+    <header>
+        
+        <!----------------- NAVBAR LOGO --------------->
+        <a href="ifeelMainPage.html" class="logo"> <img src="img/ifeel.png" alt="logo" width="80" height="35"/> </a>
+
+        <!----------------- NAVBAR BUTTONS --------------->
+        <nav>
+            <ul class="nav__links">
+                <li><a href="ifeelAboutPage.html">about us</a></li>
+                <li><a href="ifeelProfilePage.html">log in</a></li>
+                <li><a class="start" href="ifeelDrawingPage.html">start drawing</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+
+    <!--------------------------------------------------- BODY HTML ------------------------------------------------------->
+    <body>
+        
+        <!----------------- HOLE PAGE DIV --------------->
+        <div class="holepage">
+
+            <!----------------- TEXT PROMP and DROPDOWN --------------->  
+            <div class="textAndPrompt">
+
+                <div class="title">
+                    <h1>Express Yourself</h1>
+                </div>
+                
+                <div class="dropdown">
+                    <!-- <div class="dropbtn"> 
+                        <p>draw how you feel today</p>
+                        <button onclick="myFunction()" ></button>  
+                    </div> -->
+                    <button onclick="myFunction()" class="dropbtn"> <p>Draw how you feel today</p> <img style="align-self: bottom;" id="dropdownimg" src="img/pencildrop.png" alt="drop" width="22" height="22"></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                        <a href="#prompt1">Draw how you feel today.</a>
+                        <a href="#prompt2">Draw your good traits.</a>
+                        <a href="#prompt3">Draw yourself in the past, present and future.</a>
+                        <a href="#prompt4">Describe your day using colors.</a>
+                        <a href="#prompt5">Draw something that you love.</a>
+                        <a href="#prompt6">Draw a problem that you are currently dealing with.</a>
+                        <a href="#prompt7">Draw the positive things in your life.</a>
+                        <a href="#prompt8">Draw something that frustrates/annoys you.</a>
+                        <a href="#prompt9">Draw something that you feel is missing within you.</a>
+                        <a href="#prompt10">Draw something you would do if you weren’t scared.</a>
+                    </div>
+                </div>
+
+                <!-- <div class="dropdown"> 
+    
+                    <button class="dropbtn">draw how you feel today</button>
+                    <div class="dropdown-content">
+                        <a href="#">very long prompt 1</a>
+                        <a href="#">not so long prompt 2</a>
+                        <a href="#">okay, this one you must click 3</a>
+                    </div>
+    
+                </div> -->
+    
+            </div>
+            
+            <!----------------- CANVAS and TOOLS and BUTTONS and OVERLAY --------------->
+            <div class="canvasAndTools">
+
+                <!----------------- CANVAS TOOLS --------------->
+                <div class="controls">
+                    <table>
+                        <tr>
+                            <td><button id="colorpicker"></button> <input type="color" id="colorChange"/></td>
+                        </tr>   
+                        <tr>
+                            <td><button class="pencil"></button> <input type="range" id="lineWidth" min="1" max="10" step="0.5"/></td>
+                        </tr>
+                        <tr>
+                            <td><button class="bucket"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="erasor"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button id="backward"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="forward"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button id="trash"></button></td>
+                        </tr>                        
+                        
+                    </table>
+
+                    
+                    <!----------------- SUBMIT BUTTON --------------->
+                    <button class="submit" onclick="on()" >Submit</button>
+                    <a class="save" href="#"> Save</a>
+
+                    <!---------------- OVERLAY ----------------->
+                    <div id="overlay">
+                        <div id="contentOverlay">
+                            <button id="closingButton" onclick="off()">X</button>
+                            <h1 id="submitTitle">Are you sure you want to submit?</h1>
+                            <p id="submitDescription">When you submit, it will be posted to the public feed. You can <br> take it down later from your <span id="b">me</span> page. </p>
+                            <div id="drawToUpload"></div>
+                            <!-- <img id="drawToUpload" src="" alt="canvasDraw" width="400" height="400"> -->
+                            <!-- <canvas id="myCanvas" width="630" height="630"></canvas> -->
+                            <div style="display: flex;">
+                                <button id="submitFinal"> <p>Yes, Submit</p></button>
+                                <p id="cancelButton" onclick="off()">Cancel</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                <!----------------- CANVAS --------------->
+                <div class="drawingcanvas">
+                    <canvas id="myCanvas" width="630" height="630"></canvas>
+                </div>
+
+                <!--------------- SAVE BUTTON ------------->
+                <div id="saveArea"></div>
+
+                <!---------------- OVERLAY ----------------->
+                
+
+            </div>
+
+        </div>
+    
+        
+        
+    
+    </body>
+
+</html>

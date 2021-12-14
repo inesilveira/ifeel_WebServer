@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/*-------------------------NAVBAR STYLE------------------------------*/
+header {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 60px;
+}
+
+.logo{
+  cursor: pointer;
+  margin-left:2%;
+  margin-right: auto;
+}
+
+nav {
+  order: 1;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li{
+  display: inline-block;
+  padding-right: 32px;
+}
+
+.nav__links li a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #6F6F6F;
+  text-decoration: none;
+  transition: all 0.03s ease 0s;
+}
+
+.start{
+  font-weight: bold;
+}
+
+.nav__links li a:hover{
+  color: #464646;
+}
+
+
+/*-------------------------USERS NAME STYLE------------------------------*/
+.identifier {
+  position: absolute;
+  height: 158px;
+  left: 3.88%;
+  top: 150px;
+    
+}
+
+.identifier h1{
+  
+  font-family: "Encode Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500px;
+  font-size: 132px;
+  line-height: 158px;
+  color: #3D3D3D;
+    
+}
+
+.identifier img{
+    top:150px;
+}
+
+
+/*-------------------------DROPDOWN MENUS STYLE------------------------------*/
+.menus {
+    position: relative;
+    top: 353px;
+}
+
+.menu1 {
+    position: absolute;
+    left: 3.177%;
+    width: 304px;
+    z-index: 1;
+}
+.menu1 label{
+    font-family: "Encode Sans", sans-serif;
+}
+
+.menu2 {
+    position: absolute;
+    left: 13.55%;
+    width: 104px;
+    z-index: 2;
+}
+.menu2 label{
+    font-family: "Roboto", sans-serif;
+}
+
+
+/*-------------------------CLEAR BUTTON STYLE------------------------------*/
+.clear {
+  position: absolute;
+  left: 19%;
+  top:0.2%;
+  cursor: pointer;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+
+  color: #706B6B;
+
+  z-index: 3;
+
+}
+
+.clear:hover{
+  color: #464646;
+  transform: scale(1.1);
+  font-weight: bolder;
+}
+
+
+/*-------------------------IMAGES STYLE------------------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 380px 380px 380px 380px;
+  grid-template-rows: 380px 380px 380px 380px;
+  grid-gap: 40px 40px;
+  padding: 61px;
+}
+
+
+/* this work for keep the 1:1 ratio on squares (but their size and margins/paddings have to be fixed) */
+/* .grid-container div{
+  aspect-ratio: 1;
+} */
+
+.grid-item {
+  border-radius: 6px;
+  background-color: #c4c4c4;
+  background-size:  cover;                     
+  background-repeat:   no-repeat;
+  background-position: center center;
+  height: 380px;
+  width: 380px;
+  padding: 20px;
+  font-size: 15px;
+  font-family: "Encode Sans", Arial;
+  color: #6F6F6F;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-item:hover{
+  transform: scale(1.1);
+}
+
+.imgBut {
+  position: absolute;
+  top: 400px;
+  left:3.12%;
+}
+
+
+/*------------------------- POPUP STYLE------------------------------*/
+.popup {
+  position: fixed;
+  top:0px;
+  left:0px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  border: 1px;
+  z-index: 1000;
+  visibility: hidden;
+  overflow: auto;
+}
+
+.popupContentAbt {
+  background-color: #fefefe;
+  margin: 5%; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%; /* Could be more or less, depending on screen size */
+  height: 80%;
+  border-radius: 6px;
+  position: absolute;
+  right: 120px;
+}
+
+.popupImgContainer {
+  background-color: #fefefe;
+  margin: 5% ; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: 80%;
+  border-radius: 6px;
+  position: absolute;
+  left: 120px;
+  top:0px;
+}
+
+.popImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background-color: #c4c4c4;
+  z-index: 2000;
+  position: relative;
+  background-size: cover;                     
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#closePop {
+  color: #3D3D3D;
+  background-image: url("img/Close.png");
+  background-size: contain;
+  background-position: center;
+  text-decoration: none;
+  width: 15px;
+  height: 17px;
+  cursor: pointer;
+  border-style: hidden;
+  position: absolute;
+  left: 92%;
+  top: 3%;
+  font-size: large;
+}
+
+#closePop:hover {
+  transform: scale(1.1);
+}
+
+#savePop {
+  cursor: pointer;
+  background-color: white;
+  border-color: #3D3D3D;
+  border-style: solid;
+  border-radius: 6px;
+  border-width: 1px;
+  display: inline-block;
+
+  
+  width: 25%;
+  height: 5%;
+  position: absolute;
+  left: 40%;
+  top: 92%;
+  
+
+  text-decoration: none;
+  font-size: medium;
+}
+
+#savePop:hover {
+  background-color: rgba(0,0,0,0.2);
+} 
+
+#submitPop {
+  cursor: pointer;
+  background-color: white;
+  border-color: #3D3D3D;
+  border-style: solid;
+  border-radius: 6px;
+  border-width: 1px;
+  display: inline-block;
+
+  
+  width: 25%;
+  height: 5%;
+  position: absolute;
+  left: 70%;
+  top: 92%;
+  
+
+  text-decoration: none;
+  font-size: medium;
+}
+
+#submitPop:hover {
+  background-color: rgba(0,0,0,0.2);
+} 
+
+.text h1 {
+  font-family: "Roboto light", sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 30px;
+  line-height: 35,16px;
+  color: #6F6F6F;
+}
+
+.text h2 {
+  font-family: "Roboto light", sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 35,16px;
+  color: #6F6F6F;
+  position: absolute;
+}
+#pptTitle {
+  top:15%;
+}
+
+#tgsTitle {
+  top:30%;
+}
+#pstTitle {
+  top:45%;
+}
+
+/*-------------------------EXPERIMENTATION POPUP STYLE------------------------------*/
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.click {
+  position: absolute;
+  top:20px;
+  left:200px;
+  z-index: 1000;
+}
