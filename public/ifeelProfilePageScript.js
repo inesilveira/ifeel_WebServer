@@ -51,7 +51,7 @@ window.onload = function() {
     newImg.innerHTML = newImg.id;
 
     var newPost = {
-      "image": imgArray[i],
+      "image": objArray[i].image,
       "id": i + 2,
     }
 
@@ -59,7 +59,7 @@ window.onload = function() {
   }
 
   for(let i = 0; i < imgArray.length; i++){
-    document.getElementById(i+1).style.backgroundImage = imgArray[i];
+    document.getElementById(i+1).style.backgroundImage = objArray[i].image;
   }
 
 }; 
@@ -117,6 +117,57 @@ window.onclick = function(event) {
 */
 
 
-//----------------------------------------------------------
+//-------------DROPDOWN MENU UPDATE---------------------------------------------
 
  
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) 
+    {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+
+  // var e = document.getElementById("myDropdown");
+  // var value = e.options[e.selectedIndex].value;
+  // var text = e.options[e.selectedIndex].text;
+
+  // console.log(text);
+
+}
+
+function changePrompt(){
+
+  var hasbeenclicked = true
+
+  document.addEventListener('click', function(e) {
+
+    if(document.getElementById('prompt').id == 'prompt' & hasbeenclicked == true){
+
+      e = e || window.event;
+      var target = e.target,
+      text = target.innerText;
+      document.getElementById('promptToChange').innerHTML = text; 
+      
+      hasbeenclicked = false;
+
+    } 
+
+  }, false);
+
+}
+
+//----------------------------------------------------------
