@@ -287,8 +287,8 @@ html {
 }
 /* This is the  pop-up*/
 .modal-content {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
