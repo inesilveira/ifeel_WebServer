@@ -46,7 +46,9 @@ function changePrompt(){
 }
 
 //Image Array to store images that are displayed on the main page.
-const imageArray =["url('img/Hoodie1_Black.png')","url('img/Hoodie1_White.png')" , "url('img/Hoodie1_Beige.png')"];
+const imageArray =["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Image3.jpeg')",
+"url('img/Image4.jpeg')","url('img/Image5.jpeg')","url('img/Image6.jpeg')","url('img/Image7.jpeg')",
+"url('img/Image8.jpeg')","url('img/Image9.jpeg')","url('img/Image10.jpeg')"];
 
 
 window.onload = function() {
