@@ -1,6 +1,8 @@
 
 var gnArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]; //Array storing the ID's 
-var imgArray = ["url('img/testimg1.jpg')", "url('img/testimg2.jpg')"]; //Array storing the images
+var imgArray = ["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Image3.jpeg')",
+"url('img/Image4.jpeg')","url('img/Image5.jpeg')","url('img/Image6.jpeg')","url('img/Image7.jpeg')",
+"url('img/Image8.jpeg')","url('img/Image9.jpeg')","url('img/Image10.jpeg')"]; //Array storing the images
 var dateArray = ["November 21th, 2021", "November 22th, 2021"];
 var tagsArray = ["happy", "sad"];
 var promptArray = ["Draw how you feel today", "Draw your future"];
@@ -9,17 +11,23 @@ var currentId; //Variable storing the ID of the image clicked
 //possible array of objects for each post data
 var objArray = [
   {
-    "image": "url('img/testimg1.jpg')",
+    "image": "url('img/Image1.png')",
     "id": 2,
     "date": "November 21th, 2021",
     "tags": ["happy"]
   },
   {
-    "image": "url('img/testimg2.jpg",
+    "image": "url('img/Image2.jpeg')",
     "id": 3,
-    "date": "November 21th, 2021",
+    "date": "November 22th, 2021",
     "tags": ["sad"]
-  },  
+  }, 
+  {
+    "image": "url('img/Image3.jpeg')",
+    "id": 4,
+    "date": "November 23th, 2021",
+    "tags": ["sad"]
+  },   
 ] 
 
 //console.log(objArray[0].id);
@@ -78,7 +86,7 @@ function replyClick(clicked_id){
   console.log(clicked_id);
   currentId = clicked_id;
   document.getElementById("popupImg").style.backgroundImage = imgArray[clicked_id - 1];
-  document.getElementById("dateTxt").textContent = dateArray[clicked_id - 1];
+  document.getElementById("dateTxt").textContent = objArray[clicked_id - 1].date;
   document.getElementById("tagsTxt").textContent = objArray[clicked_id - 1].tags;
 }
 

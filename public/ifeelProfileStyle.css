@@ -120,7 +120,15 @@ nav {
 }
 #dropdownimg{
   margin-top: 5px;
-  margin-left: 5px;
+  margin-left: 180px;
+}
+#dropdownimg:hover{
+  transform: scale(1.2);
+}
+
+#promptToChange{
+  width: 380px;
+  z-index: 100;
 }
 
 /* Dropdown button on hover & focus */
@@ -132,11 +140,10 @@ nav {
 
 /* The search field */
 #myInput {
-  width:10px;
-  height: 10px;
+  height: 20px;
   box-sizing: border-box;
   background-image: url('img/searchicon.png');
-  background-position: 14px 12px;
+  background-position: 6px 4px;
   background-size: 20px 20px;
   background-repeat: no-repeat;
   font-size: 12px;
@@ -167,7 +174,7 @@ nav {
   font-size: 12px;
   font-family: 'Roboto',sans-serif;
   text-align: left;
-  padding: 5px 10px;
+  padding: 5px 5px;
   text-decoration: none;
   display: block;
   cursor: pointer;
