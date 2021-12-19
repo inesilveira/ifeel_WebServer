@@ -72,15 +72,6 @@ window.onload = function() {
 
 }; 
 
-//---------FUNCTION TO CLEAR THE FILTERS--------------------
-
-function changeSelected() {
-    var select1 = document.querySelector('#prompt');
-    var select2 = document.querySelector('#tags');
-    select1.value = 'feel';
-    select2.value = '#tag';
-  };
-
 //---------FUNCTION TO UPLOAD THE IMAGES--------------------
 function replyClick(clicked_id){
   console.log(clicked_id);
@@ -128,19 +119,27 @@ window.onclick = function(event) {
 //-------------DROPDOWN MENU UPDATE---------------------------------------------
 
  
-function myFunction() {
+function showDrop() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
+function showDrop2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+
 function filterFunction() {
   var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
+  input = document.getElementsByClassName("Input");
   filter = input.value.toUpperCase();
   div = document.getElementById("myDropdown");
   a = div.getElementsByTagName("a");
+  
+  
 
   for (i = 0; i < a.length; i++) {
     txtValue = a[i].textContent || a[i].innerText;
+    
     if (txtValue.toUpperCase().indexOf(filter) > -1) 
     {
       a[i].style.display = "";
@@ -168,14 +167,40 @@ function changePrompt(){
       e = e || window.event;
       var target = e.target,
       text = target.innerText;
-      document.getElementById('promptToChange').innerHTML = text; 
-      
+      document.getElementById('promptToChange').innerHTML = text;
       hasbeenclicked = false;
 
     } 
-
   }, false);
 
 }
+
+function changeTag(){
+
+  var hasbeenclicked = true
+
+  document.addEventListener('click', function(e) {
+
+    if(document.getElementById('tag').id == 'tag' & hasbeenclicked == true){
+
+      e = e || window.event;
+      var target = e.target,
+      text = target.innerText;
+      document.getElementById('tagToChange').innerHTML = text; 
+      hasbeenclicked = false;
+
+    } 
+  }, false);
+
+}
+
+//---------FUNCTION TO CLEAR THE FILTERS--------------------
+
+function clearFilter() {
+  document.getElementById('promptToChange').innerHTML = 'Press me to filter by prompt.'; 
+  document.getElementById('tagToChange').innerHTML = 'Press me to filter by tag.'; 
+};
+
+
 
 //----------------------------------------------------------
