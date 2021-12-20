@@ -204,3 +204,10 @@ function clearFilter() {
 
 
 //----------------------------------------------------------
+
+window.addEventListener('mouseup',function(event){
+  var drop1 = document.getElementById("myDropdown");
+  if(event.target != drop1 && event.target.parentNode != drop1){
+    drop1.classList.toggle("hide");
+  }
+});
