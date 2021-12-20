@@ -76,6 +76,11 @@ nav {
   
 }
  */
+.mouseScroll{
+ position: absolute;
+ top: 850px;
+ left: 800px;
+}
 
 
 .verticalLine{
@@ -128,7 +133,7 @@ html {
   .grid-item {
   display:block;
   border-radius: 6px;
-  border: 1px solid black;
+  /* border: 1px solid rgb(170, 170, 170); */
   background-color: none;
   background-size: cover;
   background-position: center center;
