@@ -4,7 +4,10 @@
         <title>Profile Page</title>
         <link rel="StyleSheet" type="text/css" href="ifeelProfileStyle.css">
         <script src="ifeelProfilePageScript.js"></script>  
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans|Roboto">
+        <!--<link rel="ifeelProfileStyle" href="https://fonts.googleapis.com/css?family=Encode+Sans|Roboto">-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -36,7 +39,58 @@
             
             <!--------DROPDOWN MENUS--------->
 
-            <div class="menus">
+            <div class="dropdown">
+                <!-- <div class="dropbtn"> 
+                    <p>draw how you feel today</p>
+                    <button onclick="myFunction()" ></button>  
+                </div> -->
+                <button onclick="showDrop()" class="dropbtn"> <div id="promptToChange"> Press me to filter by prompt. </div> <img style="align-self: bottom;" id="dropdownimg" src="img/filter.png" alt="drop" width="16" height="10"></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <input type="text" placeholder="Search.." class="Input" id="myInput" onkeyup="filterFunction()">
+                    
+                    <!-- <option value="1">Draw how you feel today.</option>
+                    <option value="2">Draw your good traits.</option>
+                    <option value="3">Draw yourself in the past, present and future..</option>
+                    <option value="4">Describe your day using colors.</option>
+                    <option value="5">Draw something that you love.</option>
+                    <option value="6">Draw a problem that you are currently dealing with.</option>
+                    <option value="7">Draw the positive things in your life.</option>
+                    <option value="8">Draw something that frustrates/annoys you.</option>
+                    <option value="9">Draw something that you feel is missing within you.</option>
+                    <option value="10">Draw something you would do if you weren’t scared.</option> -->
+
+                    <a onclick="changePrompt();showDrop()" id="prompt"> Draw how you feel today.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw your good traits.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw yourself in the past, present and future.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Describe your day using colors.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw something that you love.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw a problem that you are currently dealing with.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw the positive things in your life.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw something that frustrates/annoys y9ou.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw something that you feel is missing within you.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw something you would do if you weren’t scared.</a>
+
+                </div>
+            </div>
+
+            <div class="dropdown2">
+                <!-- <div class="dropbtn"> 
+                    <p>draw how you feel today</p>
+                    <button onclick="myFunction()" ></button>  
+                </div> -->
+                <button onclick="showDrop2()" class="dropbtn2"> <div id="tagToChange"> Press me to filter by tag. </div> <img style="align-self: bottom;" id="dropdownimg2" src="img/filter.png" alt="drop" width="16" height="10"></button>
+                <div id="myDropdown2" class="dropdown-content2">
+                    <input type="text" placeholder="Search.." class="Input" id="myInput2" onkeyup="filterFunction()">
+                    
+                
+                    <a onclick="changeTag();showDrop2()" id="tag">#happy</a>
+                    <a onclick="changeTag();showDrop2()" id="tag">#sad</a>
+                    <a onclick="changeTag();showDrop2()" id="tag">#nostalgic</a>
+                    
+                </div>
+            </div>
+
+            <!--<div class="menus">
                 <div class="menu1">
                     <label for="prompt"></label>
                         <select name="prompt" id="prompt">
@@ -55,10 +109,10 @@
                         <option value="calming">Calming</option>
                         <option value="nostalgic">Nostalgic</option>
                     </select>     
-                </div>
+                </div>-->
 
                 <!--------BUTTON TO CLEAR THE FILTERS--------->
-                <a class="clear" onclick="changeSelected()">Clear Filter</a> 
+                <a class="clear" onclick="clearFilter()">Clear Filter</a> 
                 
 
         
@@ -69,9 +123,6 @@
                 </div>
                 
             </div>
-            
-            <!--------BUTTON TO LOAD THE IMAGES (TEMPORARY)--------->
-            <button class="imgBut" onclick="changeBackground()">Load Images</button>
 
 
             <!--------POPUP WINDOW--------->
