@@ -3,7 +3,7 @@
     <head>
         <title>Login and Registration</title>
         <link rel="stylesheet" href="ifeelLogInStyle.css">
-        <link rel="javascript" href="ifeelLogInScript.js">
+        <script src="ifeelLogInScript.js"></script>  
     </head>
     <body>
 
@@ -41,10 +41,10 @@
                     <button type="button" class="toggle-btn" onclick="moveRegister()">Register</button>
                 </div>
                 <form id="login" class="input-group">
-                    <input type="text" class="input-field" placeholder="User Id" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="text" class="input-field" id="username" placeholder="User Id" required>
+                    <input type="text" class="input-field" id="password" placeholder="Enter Password" required>
                     <input type="checkbox" class="chech-box"><span>Remember Password</span>
-                    <button type="submit" class="submit-btn">Log in</button>
+                    <button type="submit" class="submit-btn" onclick="getInfo()">Log in</button>
                 </form>
                 <form id="register" class="input-group">
                     <input type="text" class="input-field" placeholder="User Id" required>
@@ -74,7 +74,7 @@
             z.style.left = "0px"; 
         }
         </script>
-
+    
         
     </body>
 </html>

@@ -13,3 +13,11 @@ function moveLogin(){
     y.style.left = "450px";
     z.style.left = "0px"; 
 }
+
+function getInfo() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+    console.log("Username:" + username + "Password:" + password);
+
+}
