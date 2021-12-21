@@ -1,3 +1,5 @@
+const { save } = require("debug/src/browser");
+
 var drawing = false;
 var context;
 
@@ -6,6 +8,29 @@ var y;
 
 var w = window.innerWidth;
 var h = window.innerHeight;
+
+// save(){
+ 
+//  var userid = sessionStorage.getItem('userid');
+//     try {
+//         let prompts = await $.ajax({
+//             url: "/api/Prompt",
+//             method: "get",
+//             dataType: "json"
+//         });
+//         let html = "";
+//         console.log("[prompts] prompts = " + JSON.stringify(prompts));
+//         for (let prompt of prompts) {
+//             console.log("[prompts] prompts = " + JSON.stringify(prompt));
+//             html += createPromptHTML(prompt);
+//         }
+//         promptsDropdown.innerHTML += html;
+
+//     } catch (err) {
+//         console.log(err);
+//     }
+
+}
 
 window.onload=function(){
 
@@ -59,6 +84,7 @@ window.onload=function(){
   
   //Hide Save Area
   document.getElementById('saveArea').style.display = "none";
+  
 }
 
 function handleDown(e)

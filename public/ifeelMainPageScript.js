@@ -1,5 +1,15 @@
+/*  STORE THE USER ID WHEN LOGGING IN ---- MOVE THIS TO THE LOGIN PAGE JS ----- */
+  function login(){
+     sessionStorage.setItem('userid', 1);
+   } 
+
+ //  this should be inside the onload ---- MOVE THIS TO THE LOGIN PAGE JS -----
+// login();
+
+
 
 //CREATE THE PROMPTS TEXT
+
 
 function createPromptHTML(prompt) {
   return "<a onclick='changePrompt(); myFunction()'; id='prompt' tag='" + prompt.promptid + "'>" + prompt.prompt_txt + "</a>";
@@ -75,6 +85,8 @@ window.onload = async function() {
   //AJAX CODE FOR THE PROMPTS
 
   let promptsDropdown = document.getElementById("myDropdown");
+
+    login();
     try {
         let prompts = await $.ajax({
             url: "/api/Prompt",
