@@ -22,7 +22,7 @@
                 <nav>
                     <ul class="nav__links">
                         <li><a href="ifeelAboutPage.html">about us</a></li>
-                        <li><a href="ifeelProfilePage.html">log in</a></li>
+                        <li><a onclick="showLog()">log in</a></li>
                         <li><a class="start" href="ifeelDrawingPage.html">start drawing</a></li>
                     </ul>
                 </nav>
@@ -159,11 +159,7 @@
                     <button id="closePop" onclick="closePop()"></button>
                     <button id="savePop">Save</button>
                     <button id="submitPop">Submit</button>
-
-                    
-
                 </div>
-                
             </div>
 
             <!-- The Modal 
@@ -178,9 +174,10 @@
             </div>
             -->
 
-              <!------------JAVASCRIPT EXPERIMENT--------------->
-            <div id="box">                
-                <!-- empty -->
+            <div id="overlay">
+                <div class="logIn">
+                    <button class="logBut" onclick="closePop()">Log In</button>
+                </div>
             </div>
 
         </main>

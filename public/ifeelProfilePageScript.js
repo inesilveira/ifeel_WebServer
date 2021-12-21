@@ -211,3 +211,19 @@ window.addEventListener('mouseup',function(event){
     drop1.classList.toggle("hide");
   }
 });
+
+
+//---------LOG IN FUNCTIONALITY--------------------
+
+var btn = document.getElementById("myBtn");
+var overlay = document.getElementById('overlay');
+
+function showLog(){
+  document.getElementById('overlay').style.visibility = "visible";
+}
+
+function closePop(){
+  document.getElementById('overlay').style.visibility = "hidden";
+}
+
+

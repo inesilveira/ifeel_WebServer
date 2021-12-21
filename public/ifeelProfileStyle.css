@@ -668,3 +668,53 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+/*-------------------------OVERLAY STYLE------------------------------*/
+#overlay {
+  position: fixed;
+  top:0px;
+  left:0px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  border: 1px;
+  visibility: hidden;
+  overflow: auto;
+  z-index: 3;
+}
+
+.logIn {
+  position: fixed;
+  align-content: center;
+  width: 450px;
+  height:650px;
+  top:20%;
+  left:40%;
+  background-color: white;
+  border-radius: 6px;
+  z-index: 4;
+
+}
+
+.logBut {
+  cursor: pointer;
+  background-color: white;
+  border-color: #6F6F6F;
+  border-style: solid;
+  border-radius: 6px;
+  border-width: 1px;
+  display: inline-block;
+
+  
+  width: 25%;
+  height: 5%;
+  position: absolute;
+  left: 40%;
+  top: 92%;
+  
+
+  text-decoration: none;
+  font-size: medium;
+}
