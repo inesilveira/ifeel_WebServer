@@ -226,6 +226,8 @@ html {
   background-size: 20px 20px;
   background-repeat: no-repeat;
   font-size: 20px;
+  color: #3d3d3d;
+  text-transform: uppercase;
   width: 1260px;
   padding: 14px 20px 12px 45px;
   border: none;
@@ -259,6 +261,7 @@ html {
   background-color:none;
   opacity: 0.96;
   
+  
 }
 
 /* Links inside the dropdown */
@@ -273,6 +276,8 @@ html {
   display: block;
   border-radius: 6px;
   background-color: rgb(242, 242, 242);
+  
+  
   
   
 }
