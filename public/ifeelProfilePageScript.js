@@ -222,8 +222,5 @@ function showLog(){
   document.getElementById('overlay').style.visibility = "visible";
 }
 
-function closePop(){
-  document.getElementById('overlay').style.visibility = "hidden";
-}
 
 
