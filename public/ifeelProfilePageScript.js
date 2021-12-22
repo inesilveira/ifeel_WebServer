@@ -1,6 +1,8 @@
 
 var gnArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]; //Array storing the ID's 
-var imgArray = ["url('img/testimg1.jpg')", "url('img/testimg2.jpg')"]; //Array storing the images
+var imgArray = ["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Image3.jpeg')",
+"url('img/Image4.jpeg')","url('img/Image5.jpeg')","url('img/Image6.jpeg')","url('img/Image7.jpeg')",
+"url('img/Image8.jpeg')","url('img/Image9.jpeg')","url('img/Image10.jpeg')"]; //Array storing the images
 var dateArray = ["November 21th, 2021", "November 22th, 2021"];
 var tagsArray = ["happy", "sad"];
 var promptArray = ["Draw how you feel today", "Draw your future"];
@@ -9,17 +11,23 @@ var currentId; //Variable storing the ID of the image clicked
 //possible array of objects for each post data
 var objArray = [
   {
-    "image": "url('img/testimg1.jpg')",
+    "image": "url('img/Image1.png')",
     "id": 2,
     "date": "November 21th, 2021",
     "tags": ["happy"]
   },
   {
-    "image": "url('img/testimg2.jpg",
+    "image": "url('img/Image2.jpeg')",
     "id": 3,
-    "date": "November 21th, 2021",
+    "date": "November 22th, 2021",
     "tags": ["sad"]
-  },  
+  }, 
+  {
+    "image": "url('img/Image3.jpeg')",
+    "id": 4,
+    "date": "November 23th, 2021",
+    "tags": ["sad"]
+  },   
 ] 
 
 //console.log(objArray[0].id);
@@ -64,21 +72,12 @@ window.onload = function() {
 
 }; 
 
-//---------FUNCTION TO CLEAR THE FILTERS--------------------
-
-function changeSelected() {
-    var select1 = document.querySelector('#prompt');
-    var select2 = document.querySelector('#tags');
-    select1.value = 'feel';
-    select2.value = '#tag';
-  };
-
 //---------FUNCTION TO UPLOAD THE IMAGES--------------------
 function replyClick(clicked_id){
   console.log(clicked_id);
   currentId = clicked_id;
   document.getElementById("popupImg").style.backgroundImage = imgArray[clicked_id - 1];
-  document.getElementById("dateTxt").textContent = dateArray[clicked_id - 1];
+  document.getElementById("dateTxt").textContent = objArray[clicked_id - 1].date;
   document.getElementById("tagsTxt").textContent = objArray[clicked_id - 1].tags;
 }
 
@@ -120,19 +119,27 @@ window.onclick = function(event) {
 //-------------DROPDOWN MENU UPDATE---------------------------------------------
 
  
-function myFunction() {
+function showDrop() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
+function showDrop2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+
 function filterFunction() {
   var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
+  input = document.getElementsByClassName("Input");
   filter = input.value.toUpperCase();
   div = document.getElementById("myDropdown");
   a = div.getElementsByTagName("a");
+  
+  
 
   for (i = 0; i < a.length; i++) {
     txtValue = a[i].textContent || a[i].innerText;
+    
     if (txtValue.toUpperCase().indexOf(filter) > -1) 
     {
       a[i].style.display = "";
@@ -160,14 +167,40 @@ function changePrompt(){
       e = e || window.event;
       var target = e.target,
       text = target.innerText;
-      document.getElementById('promptToChange').innerHTML = text; 
-      
+      document.getElementById('promptToChange').innerHTML = text;
       hasbeenclicked = false;
 
     } 
-
   }, false);
 
 }
+
+function changeTag(){
+
+  var hasbeenclicked = true
+
+  document.addEventListener('click', function(e) {
+
+    if(document.getElementById('tag').id == 'tag' & hasbeenclicked == true){
+
+      e = e || window.event;
+      var target = e.target,
+      text = target.innerText;
+      document.getElementById('tagToChange').innerHTML = text; 
+      hasbeenclicked = false;
+
+    } 
+  }, false);
+
+}
+
+//---------FUNCTION TO CLEAR THE FILTERS--------------------
+
+function clearFilter() {
+  document.getElementById('promptToChange').innerHTML = 'Press me to filter by prompt.'; 
+  document.getElementById('tagToChange').innerHTML = 'Press me to filter by tag.'; 
+};
+
+
 
 //----------------------------------------------------------
