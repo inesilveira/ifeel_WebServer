@@ -86,24 +86,24 @@ window.onload = async function() {
 
   let promptsDropdown = document.getElementById("myDropdown");
 
-    login();
-    try {
-        let prompts = await $.ajax({
-            url: "/api/Prompt",
-            method: "get",
-            dataType: "json"
-        });
-        let html = "";
-        console.log("[prompts] prompts = " + JSON.stringify(prompts));
-        for (let prompt of prompts) {
-            console.log("[prompts] prompts = " + JSON.stringify(prompt));
-            html += createPromptHTML(prompt);
-        }
-        promptsDropdown.innerHTML += html;
+  login();
+  try {
+      let prompts = await $.ajax({
+          url: "/api/Prompt",
+          method: "get",
+          dataType: "json"
+      });
+      let html = "";
+      console.log("[prompts] prompts = " + JSON.stringify(prompts));
+      for (let prompt of prompts) {
+          console.log("[prompts] prompts = " + JSON.stringify(prompt));
+          html += createPromptHTML(prompt);
+      }
+      promptsDropdown.innerHTML += html;
 
-    } catch (err) {
-        console.log(err);
-    }
+  } catch (err) {
+      console.log(err);
+  }
 
 }
 

@@ -6,6 +6,8 @@
         <link rel="javascript" href="ifeelDrawingPageScript.js">
 
         <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <script  src="ifeelDrawingPageScript.js" defer></script>   
         
         <style>
@@ -55,7 +57,7 @@
                         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
                 
 
-                        <a onclick="changePrompt();myFunction()" id="prompt"> Draw how you feel today.</a>
+                        <!-- <a onclick="changePrompt();myFunction()" id="prompt"> Draw how you feel today.</a>
                         <a onclick="changePrompt();myFunction()" id="prompt">Draw your good traits.</a>
                         <a onclick="changePrompt();myFunction()" id="prompt">Draw yourself in the past, present and future.</a>
                         <a onclick="changePrompt();myFunction()" id="prompt">Describe your day using colors.</a>
@@ -64,7 +66,7 @@
                         <a onclick="changePrompt();myFunction()" id="prompt">Draw the positive things in your life.</a>
                         <a onclick="changePrompt();myFunction()" id="prompt">Draw something that frustrates/annoys you.</a>
                         <a onclick="changePrompt();myFunction()" id="prompt">Draw something that you feel is missing within you.</a>
-                        <a onclick="changePrompt();myFunction()" id="prompt">Draw something you would do if you weren’t scared.</a>
+                        <a onclick="changePrompt();myFunction()" id="prompt">Draw something you would do if you weren’t scared.</a> -->
 
                     </div>
                 </div>
@@ -92,7 +94,7 @@
                             <td><button id="colorpicker"></button> <input type="color" id="colorChange"/></td>
                         </tr>   
                         <tr>
-                            <td><button class="pencil"></button> <input type="range" id="lineWidth" min="1" max="10" step="0.5"/></td>
+                            <td><button class="pencil"></button> <input type="range" id="lineWidth" class="lineWidthChanger" min="1" max="10" step="0.5"/></td>
                         </tr>
                         <tr>
                             <td><button class="bucket"></button></td>
@@ -151,11 +153,6 @@
 
         </div>
 
-        <div id="spacer"></div>
-    
-        
-        
-    
     </body>
 
 </html>

@@ -28,7 +28,7 @@ app.use('/users', usersRouter);
 
 //-------------------------------------------------------------------------
 app.use('/api/Account', AccountRouter);
-app.use('/api/Multmedia', MultimediaRouter);
+app.use('/api/Multimedia', MultimediaRouter);
 
 app.use('/api/Prompt', PromptRouter);
 
