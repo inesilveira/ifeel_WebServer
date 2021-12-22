@@ -1,3 +1,10 @@
+// const { save } = require("debug/src/browser");
+
+/*  STORE THE USER ID WHEN LOGGING IN ---- MOVE THIS TO THE LOGIN PAGE JS ----- */
+function login(){
+  sessionStorage.setItem('userid', 1);
+} 
+
 var drawing = false;
 var context;
 
@@ -7,7 +14,35 @@ var y;
 var w = window.innerWidth;
 var h = window.innerHeight;
 
-window.onload=function(){
+//CREATE THE PROMPTS TEXT
+
+function createPromptHTML(prompt) {
+  return "<a onclick='changePrompt(); myFunction()'; id='prompt' tag='" + prompt.promptid + "'>" + prompt.prompt_txt + "</a>";
+}
+
+window.onload= async function(){
+
+  let promptsDropdown = document.getElementById("myDropdown");
+
+  login();
+  try {
+      let prompts = await $.ajax({
+          url: "/api/Prompt",
+          method: "get",
+          dataType: "json"
+      });
+      let html = "";
+      console.log("[prompts] prompts = " + JSON.stringify(prompts));
+      for (let prompt of prompts) {
+          console.log("[prompts] prompts = " + JSON.stringify(prompt));
+          html += createPromptHTML(prompt);
+      }
+      promptsDropdown.innerHTML += html;
+
+  } catch (err) {
+      console.log(err);
+  }
+
 
   //Clear Button
   document.getElementById('trash').addEventListener('click', function(){
@@ -59,6 +94,7 @@ window.onload=function(){
   
   //Hide Save Area
   document.getElementById('saveArea').style.display = "none";
+  
 }
 
 function handleDown(e)
