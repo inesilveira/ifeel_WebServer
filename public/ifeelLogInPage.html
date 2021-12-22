@@ -3,7 +3,10 @@
     <head>
         <title>Login and Registration</title>
         <link rel="stylesheet" href="ifeelLogInStyle.css">
-        <script src="ifeelLogInScript.js"></script>  
+        <script src="ifeelLogInScript.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">  
     </head>
     <body>
 
@@ -35,23 +38,21 @@
        -->
         <div class="hero">
             <div class="form-box">
-                <div class="button-box">
-                    <div id="btn"></div>
-                    <button type="button" class="toggle-btn" onclick="moveLogin()">Log In</button>
-                    <button type="button" class="toggle-btn" onclick="moveRegister()">Register</button>
-                </div>
+                
                 <form id="login" class="input-group">
+                    <h1 class="Title">Log in</h1>
                     <input type="text" class="input-field" id="username" placeholder="User Id" required>
                     <input type="text" class="input-field" id="password" placeholder="Enter Password" required>
-                    <input type="checkbox" class="chech-box"><span>Remember Password</span>
                     <button type="submit" class="submit-btn" onclick="getInfo()">Log in</button>
+                    <p type="text" class="registerTxt" onclick="moveRegister()">Create a register!</p>
                 </form>
                 <form id="register" class="input-group">
+                    <h1 class="Title">Register</h1>
                     <input type="text" class="input-field" placeholder="User Id" required>
                     <input type="text" class="input-field" placeholder="Enter Password" required>
                     <input type="email" class="input-field" placeholder="Email Id" required>
-                    <input type="checkbox" class="chech-box"><span>I agree to terms and conditions</span>
                     <button type="submit" class="submit-btn">Register</button>
+                    <p type="text" class="loginTxt" onclick="moveLogin()">Log in!</p>
                 </form>
             </div> 
         </div> 
@@ -60,18 +61,15 @@
         <script>
         var x= document.getElementById("login");
         var y= document.getElementById("register");
-        var z= document.getElementById("btn");
 
         function moveRegister(){
             x.style.left = "-400px";
             y.style.left = "50px";
-            z.style.left = "110px"; 
         }
 
         function moveLogin(){
             x.style.left = "50px";
             y.style.left = "450px";
-            z.style.left = "0px"; 
         }
         </script>
     
