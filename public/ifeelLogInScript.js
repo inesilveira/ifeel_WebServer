@@ -19,9 +19,14 @@ function moveLogin(){
 function getInfo() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    
-    console.log("Username:" + username + "Password:" + password);
+    alert(username);
+}
 
+function getReg() {
+    var username1 = document.getElementById("username1").value;
+    var password1 = document.getElementById("password1").value;
+    var email = document.getElementById("email").value;
+    alert(email);
 }
 
 
