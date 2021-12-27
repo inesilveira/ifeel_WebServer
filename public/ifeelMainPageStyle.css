@@ -100,7 +100,7 @@ html {
   top: 1100px;
   
   font-family: 'Encode Sans','Roboto',sans-serif;
-  font-weight: 300;
+  font-weight:300;
   font-size: 34px;
   line-height: 80px;
   text-align: left;
@@ -111,10 +111,10 @@ html {
   
   color: #3d3d3d;
   z-index: 2;
+}
 
 /*/-------------------- GRID ----------------------/*/
 
-}
 .grid-container {
   position: absolute;
   top: 1200px;
