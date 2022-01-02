@@ -76,13 +76,41 @@ nav {
   
 }
  */
-.mouseScroll{
+/* .mouseScroll{
  position: absolute;
  top: 850px;
  left: 800px;
+} */
+
+.mouse-scroll {
+  width: 2.1em;
+  height: 4em;
+  border: solid 2px black;
+  border-radius: 30px;
+  position: absolute;
+  left: 800px;
+  top: 800px;  
 }
-
-
+.mouse-scroll::before {
+  content: '';
+  width: 0.4em;
+  height:0.4em;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 2.5s infinite;
+}
+@keyframes scroll {
+  0% {
+    bottom: 80%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 20%;
+  }
+}
 .verticalLine{
   margin-left: 1440px;
   position: absolute;
