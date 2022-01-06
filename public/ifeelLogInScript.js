@@ -21,7 +21,6 @@ function getInfo() {
     var password = document.getElementById("password").value;
     alert('Welcome ' + username + '!');
     name = username;
-    document.getElementById('User').innerHTML = name;
 }
 
 function getReg() {
@@ -30,6 +29,7 @@ function getReg() {
     var email = document.getElementById("email").value;
     alert('Welcome ' + email);
 }
+
 
 
 
