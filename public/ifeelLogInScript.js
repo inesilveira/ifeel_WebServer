@@ -2,7 +2,7 @@ var x= document.getElementById("login");
 var y= document.getElementById("register");
 var z= document.getElementById("btn");
 
-
+var name;
 
 function moveRegister(){
     x.style.left = "-400px";
@@ -19,7 +19,9 @@ function moveLogin(){
 function getInfo() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    alert(username);
+    alert('Welcome ' + username + '!');
+    name = username;
+    document.getElementById('User').innerHTML = name;
 }
 
 function getReg() {
