@@ -66,10 +66,10 @@ nav {
 .identifier h1{
   
   font-family: 'Encode Sans', sans-serif;
-  font-style: normal;
+  /*font-style: normal;*/
   font-size: 132px;
   font-weight: 300;
-  line-height: 158px;
+  /*line-height: 158px;*/
   color: black;
     
 }

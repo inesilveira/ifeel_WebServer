@@ -30,6 +30,9 @@ function getReg() {
     alert('Welcome ' + email);
 }
 
+console.log(name);
+
+
 
 
 
