@@ -20,7 +20,8 @@ header {
 
 .logo{
   cursor: pointer;
-  margin-left:2%;
+  /* margin-left:2%; */
+  margin-left:6%;
   margin-right: auto;
 }
 
@@ -52,6 +53,107 @@ nav {
 .nav__links li a:hover{
   color: #464646;
 }
+
+/*/--------------------------------  SIDE BAR -------------------------------/*/
+/* based on w3schools*/
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  z-index: 10;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  background-color: transparent;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.sidebarbutton{
+  position: absolute;
+  background-image: url('img/sideicon.png');
+  background-position: center center;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  /* left: 15px;
+  top: 70px; */
+  left: 2%;
+  top: 24px;
+  opacity: 100%;
+  border: none;
+  cursor: pointer;
+}
+.shopicon {
+  background-image: url('img/shopicon.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  opacity: 70%;
+}
+.instagramicon {
+  background-image: url('img/instagramicon.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  opacity: 70%;
+}
+.twittericon {
+  background-image: url('img/twittericon.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  opacity: 70%;
+}
+.youtubeicon {
+  background-image: url('img/youtubeicon.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  opacity: 70%;
+}
+.facebookicon {
+  background-image: url('img/facebookicon.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  opacity: 70%;
+}
+/* When you mouse over the navigation links, opacity will change */
+.sidenav a:hover {
+  opacity: 100%;
+}
+
+/* Position and style of the close button */
+.sidenav .closebtn {
+  position: absolute;
+  top: -15px; /* needed it to be higher */
+  right: 20px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} */
+
  /*/------------------------------ MAIN PROMPT ---------------------------- /*/
 .Prompt {
    

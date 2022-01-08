@@ -1,5 +1,19 @@
 
-/*/-------- | This is the ifeel Main Page JS File |---------/*/
+//-------- | This is the ifeel Main Page JS File |---------//
+
+//--Side bar
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "180px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+} 
+
+
+
 
 /* When the user clicks on the button,
 toggles between hiding and showing the dropdown content */
