@@ -49,16 +49,19 @@ nav {
   color: #464646;
 }
 
-.title {    /*main About U title */
+
+
+.title {
   position: absolute;
   width: 280px;
   height: 77px;
-  left: 35%;
+  left: 600px;
   top: 113px;
     
 }
 
 .title h1{
+  
   
   font-family: "Encode Sans", Arial;
   font-style: normal;
@@ -66,17 +69,20 @@ nav {
   font-size: 64px;
   line-height: 77px;
   /* identical to box height */
+  
   color: #6F6F6F;
 }
 
-.paragraphs  {
+.paragraphs {
   position: absolute;
   width: 504px;
-  height: 30px;
-  left: 35%;
-  top: 40px;
+  height: 43px;
+  left: 600px;
+  top: 50px;
   font-family: 'Roboto',sans-serif;
   font-weight: lighter;
+  
+
 }
 .subtitle {
   font-family: "Encode Sans", Arial;
@@ -84,7 +90,7 @@ nav {
   font-weight: normal;
   font-size: 36px;
   line-height: 43px;
-  left: 0%;
+
   color: #6F6F6F;
 }
 
@@ -93,13 +99,14 @@ nav {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 18,75px;
+
   color: #6F6F6F;
 }
 
 .paragraphs h2{
   position: absolute;
-  top: 190px;
+  top: 217px;
 }
 
 .paragraphs h3{
@@ -114,19 +121,15 @@ nav {
 
 .text1{
   position: absolute;
-  top: 260px;
+  top: 282px;
 }
 
 .text2{
   position: absolute;
-  top: 410px;
+  top: 586px;
 }
 
 .text3{
-  position: absolute;
-  top: 590px; 
-}
-.text4{
   position: absolute;
   top: 753px; 
 }

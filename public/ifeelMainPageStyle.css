@@ -20,8 +20,7 @@ header {
 
 .logo{
   cursor: pointer;
-  /* margin-left:2%; */
-  margin-left:6%;
+  margin-left:2%;
   margin-right: auto;
 }
 
@@ -53,114 +52,6 @@ nav {
 .nav__links li a:hover{
   color: #464646;
 }
-
-/*/--------------------------------  SIDE BAR -------------------------------/*/
-/* based on w3schools*/
-/* The side navigation menu */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  z-index: 10;
-}
-
-/* The navigation menu links */
-.sidenav a {
-  position: relative;
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  text-align: left;
-  font-size: 21px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 200;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-  background-color: transparent;
-  margin-left: 25px;
-  margin-top: 20px;
-  
-}
-.sidebarbutton{
-  position: absolute;
-  background-image: url('img/sideicon.png');
-  background-position: center center;
-  background-size: 30px 30px;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  /* left: 15px;
-  top: 70px; */
-  left: 2%;
-  top: 24px;
-  opacity: 100%;
-  border: none;
-  cursor: pointer;
-}
-.shopicon {
-  background-image: url('img/shopicon.png');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 32px 32px;
-  opacity: 70%;
-  
-}
-
-.instagramicon {
-  background-image: url('img/instagramicon.png');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 32px 32px;
-  opacity: 70%;
- 
-  
-}
-.twittericon {
-  background-image: url('img/twittericon.png');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 32px 32px;
-  opacity: 70%;
-}
-.youtubeicon {
-  background-image: url('img/youtubeicon.png');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 32px 32px;
-  opacity: 70%;
-}
-.facebookicon {
-  background-image: url('img/facebookicon.png');
-  background-repeat: no-repeat;
-  background-position: left left;
-  background-size: 32px 32px;
-  opacity: 70%;
-}
-/* When you mouse over the navigation links, opacity will change */
-.sidenav a:hover {
-  opacity: 100%;
-}
-
-/* Position and style of the close button */
-.sidenav .closebtn {
-  position: absolute;
-  top: -30px; /* needed it to be higher */
-  right: 10px;
-  font-size: 36px;
-  margin-left: 50px;
-  opacity: 70%;
-}
-.closebtn a:hover {
-  opacity: 100%;
-}
-
  /*/------------------------------ MAIN PROMPT ---------------------------- /*/
 .Prompt {
    
@@ -270,20 +161,25 @@ html {
   .grid-item {
   display:block;
   border-radius: 6px;
-  /* border: 1px solid rgb(170, 170, 170); */ /*un-comment this if you want the border back */
+  /* border: 1px solid rgb(170, 170, 170); */
   background-color: none;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   padding: 40px;
   font-size: 20px;
-  color: transparent; /*change this to black if you want to see the id*/
   height: 360px;
   width: 360px;
   cursor: pointer;
+  
+  /* -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out; */
   transition: all 0.3s ease-in-out;
   }
- .grid-item:hover{
+
+  .grid-item:hover{
     transform: scale(1.03);
 
   }
@@ -308,6 +204,8 @@ html {
 .refresh:hover {
   background-color: none;
   transform: rotate(90deg);
+  /* border: 2px solid; */
+  /* border-color: #3d3d3d; */
 }
 
 /*/------------------ DROPDOWN MENU --------------------/*/
@@ -328,6 +226,18 @@ html {
   cursor: pointer;
   background-color: none;
 }
+
+/* .dropbtn {
+  top: 0px;
+  left: 0px;
+
+  padding: 25px;
+  margin-left: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+} */
 
 /* Dropdown button on hover*/
 .dropbtn:hover, .dropbtn:focus {
@@ -394,6 +304,10 @@ html {
   display: block;
   border-radius: 6px;
   background-color: rgb(242, 242, 242);
+  
+  
+  
+  
 }
 
 /* color of dropdown links on hover */
@@ -436,6 +350,8 @@ html {
   width: 30px;
   height: 30px;
   transform: rotate(45deg);
+  /* padding: 5px; */
+  /* margin: 5px; */
   text-align: center;
   border: none;
   border-radius:100%;
