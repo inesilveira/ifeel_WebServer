@@ -2,21 +2,18 @@
 //-------- | This is the ifeel Main Page JS File |---------//
 
 //--Side bar
-/* Set the width of the side navigation to 250px */
+/* This opens the sidebar. Sets the width of the side navigation to 250px */
 function openNav() {
   document.getElementById("mySidenav").style.width = "180px";
 }
 
-/* Set the width of the side navigation to 0 */
+/* This closes the sidebar. Sets the width of the side navigation to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 } 
 
-
-
-
-/* When the user clicks on the button,
-toggles between hiding and showing the dropdown content */
+/* When the user clicks on the button, it
+toggles between hiding and showing the dropdown content (prompt menu) */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -60,13 +57,14 @@ function changePrompt(){
 }
 
 //Image Array to store images that are displayed on the main page.
-const imageArray =["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Image3.jpeg')",
-"url('img/Image4.jpeg')","url('img/Image5.jpeg')","url('img/Image6.jpeg')","url('img/Image7.jpeg')",
-"url('img/Image8.jpeg')","url('img/Image9.jpeg')","url('img/Image10.jpeg')"];
+const imageArray =["url('img/Image1.png')","url('img/Image2.png')", "url('img/Image3.png')",
+"url('img/Image4.png')","url('img/Image5.png')","url('img/Image6.png')","url('img/Image7.png')",
+"url('img/Image8.png')","url('img/Image9.png')","url('img/Image10.png')","url('img/Image11.png')"
+,"url('img/Image12.png')","url('img/Image13.png')"];
 
 
 window.onload = function() {
-const gridArray = [2,3,4,5,6,7,8,9,10,11,12]; //Array that contains the grid items. Eventually this would need to be updated automatically when users post.
+const gridArray = [2,3,4,5,6,7,8,9,10,11,12,13]; //Array that contains the grid items. Eventually this would need to be updated automatically when users post.
 var originalcontainer = document.getElementById('container'); // The grid container.
 var originalgrid = document.getElementById('1'); // The original grid element that is duplicated every time. 
 
@@ -81,10 +79,6 @@ var originalgrid = document.getElementById('1'); // The original grid element th
     document.getElementById(i+1).style.backgroundImage = imageArray[i]; // adds the image to the grid items. 
   }
 }
-
-// var modal = document.querySelector('.bg-modal');
-// var btn = document.getElementById('1');
-
 
 var currentId; // Stores the id that is clicked on. 
 
