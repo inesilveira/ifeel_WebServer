@@ -33,7 +33,7 @@ function getReg() {
     var username1 = document.getElementById("username1").value;
     var password1 = document.getElementById("password1").value;
     var email = document.getElementById("email").value;
-    alert('Welcome ' + username1);
+    alert('Welcome ' + username1 + '!');
     name = username1;
     console.log(username1);
 }
