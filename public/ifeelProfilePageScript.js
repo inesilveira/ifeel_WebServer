@@ -3,9 +3,15 @@ var gnArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]; //Array storing the ID's
 var imgArray = ["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Image3.jpeg')",
 "url('img/Image4.jpeg')","url('img/Image5.jpeg')","url('img/Image6.jpeg')","url('img/Image7.jpeg')",
 "url('img/Image8.jpeg')","url('img/Image9.jpeg')","url('img/Image10.jpeg')"]; //Array storing the images
+<<<<<<< HEAD
 var dateArray = ["November 21th, 2021", "November 22th, 2021"];
 var tagsArray = ["happy", "sad"];
 var promptArray = ["Draw how you feel today", "Draw your future"];
+=======
+var dateArray = ["November 21th, 2021", "November 22th, 2021", "November 23th, 2021"];
+var tagsArray = ["happy", "sad", "nostalgic"];
+var promptArray = ["How you feel toda", "Your good traits", "Something that you love"];
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 var currentId; //Variable storing the ID of the image clicked 
 
 //possible array of objects for each post data
@@ -14,20 +20,79 @@ var objArray = [
     "image": "url('img/Image1.png')",
     "id": 2,
     "date": "November 21th, 2021",
+<<<<<<< HEAD
     "tags": ["happy"]
+=======
+    "tags": ["happy"],
+    "prompt": ["How you feel today"]
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
   },
   {
     "image": "url('img/Image2.jpeg')",
     "id": 3,
     "date": "November 22th, 2021",
+<<<<<<< HEAD
     "tags": ["sad"]
+=======
+    "tags": ["sad"],
+    "prompt": ["Your good traits"]
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
   }, 
   {
     "image": "url('img/Image3.jpeg')",
     "id": 4,
     "date": "November 23th, 2021",
+<<<<<<< HEAD
     "tags": ["sad"]
   },   
+=======
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },   
+  {
+    "image": "url('img/Image4.jpeg')",
+    "id": 5,
+    "date": "November 24th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image5.jpeg')",
+    "id": 6,
+    "date": "November 25th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image6.jpeg')",
+    "id": 7,
+    "date": "November 26th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image7.jpeg')",
+    "id": 8,
+    "date": "November 27th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image8.jpeg')",
+    "id": 9,
+    "date": "November 28th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image9.jpeg')",
+    "id": 10,
+    "date": "November 29th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  }
+    
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 ] 
 
 //console.log(objArray[0].id);
