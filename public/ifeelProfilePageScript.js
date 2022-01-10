@@ -6,10 +6,13 @@ var imgArray = ["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Imag
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 var dateArray = ["November 21th, 2021", "November 22th, 2021"];
 var tagsArray = ["happy", "sad"];
 var promptArray = ["Draw how you feel today", "Draw your future"];
 =======
+=======
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
@@ -29,8 +32,11 @@ var objArray = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "tags": ["happy"]
 =======
+=======
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
@@ -46,8 +52,11 @@ var objArray = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "tags": ["sad"]
 =======
+=======
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
@@ -63,9 +72,12 @@ var objArray = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "tags": ["sad"]
   },   
 =======
+=======
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
@@ -88,6 +100,7 @@ var objArray = [
     "prompt": ["Something that you love"]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   {
     "image": "url('img/Image6.jpeg')",
@@ -111,6 +124,10 @@ var objArray = [
   },
   {
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
+=======
+  },
+  {
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
     "image": "url('img/Image6.jpeg')",
     "id": 7,
     "date": "November 26th, 2021",
@@ -126,6 +143,9 @@ var objArray = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
+=======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
@@ -145,6 +165,9 @@ var objArray = [
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
+=======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
