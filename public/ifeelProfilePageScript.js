@@ -1,11 +1,10 @@
 
 var gnArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]; //Array storing the ID's 
 var imgArray = ["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Image3.jpeg')",
-"url('img/Image4.jpeg')","url('img/Image5.jpeg')","url('img/Image6.jpeg')","url('img/Image7.jpeg')",
-"url('img/Image8.jpeg')","url('img/Image9.jpeg')","url('img/Image10.jpeg')"]; //Array storing the images
-var dateArray = ["November 21th, 2021", "November 22th, 2021"];
-var tagsArray = ["happy", "sad"];
-var promptArray = ["Draw how you feel today", "Draw your future"];
+"url('img/Image4.jpeg')"]; //Array storing the images
+var dateArray = ["November 21th, 2021", "November 22th, 2021", "November 23th, 2021"];
+var tagsArray = ["happy", "sad", "nostalgic"];
+var promptArray = ["How you feel toda", "Your good traits", "Something that you love"];
 var currentId; //Variable storing the ID of the image clicked 
 
 //possible array of objects for each post data
@@ -13,21 +12,31 @@ var objArray = [
   {
     "image": "url('img/Image1.png')",
     "id": 2,
-    "date": "November 21th, 2021",
-    "tags": ["happy"]
+    "date": "January 10th, 2021",
+    "tags": ["happy"],
+    "prompt": ["How you feel today"]
   },
   {
-    "image": "url('img/Image2.jpeg')",
+    "image": "url('img/Image2.png')",
     "id": 3,
-    "date": "November 22th, 2021",
-    "tags": ["sad"]
+    "date": "December 28th, 2021",
+    "tags": ["proud"],
+    "prompt": ["Your good traits"]
   }, 
   {
-    "image": "url('img/Image3.jpeg')",
+    "image": "url('img/Image3.png')",
     "id": 4,
-    "date": "November 23th, 2021",
-    "tags": ["sad"]
+    "date": "December 5th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
   },   
+  {
+    "image": "url('img/Image4.png')",
+    "id": 5,
+    "date": "November 15th, 2021",
+    "tags": ["sad"],
+    "prompt": ["Something that annoys you"]
+  },
 ] 
 
 //console.log(objArray[0].id);
@@ -52,11 +61,10 @@ window.onload = function() {
   }*/
 
   //Option 2
-  for(let i = 0; i < gnArray.length; i++){
+  for(let i = 0; i < imgArray.length - 1; i++){
     var newImg = original.cloneNode(true);
     var newAppend = parent.appendChild(newImg);
     newImg.id = i + 2;
-    newImg.innerHTML = newImg.id;
 
     var newPost = {
       "image": objArray[i].image,
@@ -76,9 +84,10 @@ window.onload = function() {
 function replyClick(clicked_id){
   console.log(clicked_id);
   currentId = clicked_id;
-  document.getElementById("popupImg").style.backgroundImage = imgArray[clicked_id - 1];
+  document.getElementById("popupImg").style.backgroundImage = objArray[clicked_id - 1].image;
   document.getElementById("dateTxt").textContent = objArray[clicked_id - 1].date;
   document.getElementById("tagsTxt").textContent = objArray[clicked_id - 1].tags;
+  document.getElementById("promptTxt").textContent = objArray[clicked_id - 1].prompt;
 }
 
 
@@ -204,3 +213,23 @@ function clearFilter() {
 
 
 //----------------------------------------------------------
+
+window.addEventListener('mouseup',function(event){
+  var drop1 = document.getElementById("myDropdown");
+  if(event.target != drop1 && event.target.parentNode != drop1){
+    drop1.classList.toggle("hide");
+  }
+});
+
+
+//---------LOG IN FUNCTIONALITY--------------------
+
+var btn = document.getElementById("myBtn");
+var overlay = document.getElementById('overlay');
+
+function showLog(){
+  document.getElementById('overlay').style.visibility = "visible";
+}
+
+
+
