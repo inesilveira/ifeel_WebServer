@@ -3,7 +3,6 @@
 
 .holepage{
     position: relative;
-    left: 2.5%;
 }
 
 * {
@@ -65,7 +64,7 @@ nav {
 /* parent for title and prompt */
 .textAndPrompt{
     position: relative;
-    margin-top: 110px;
+    margin-top: -15px;
     margin-left: 28.2638%;
 }
 
@@ -99,13 +98,9 @@ nav {
     height: 45px;
 
     text-align: left;
-    /* float: inline-start; */
+
     display:flex;
     
-    /* background-image: url('img/searchicon.png');
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 48px 30px; */
     padding: 10px;
 
     font-size: 26px;
@@ -113,20 +108,13 @@ nav {
 
     border: none;
     cursor: pointer;
-
-    /* transition-duration: 0.4s; */
 }
+
 #dropdownimg{
     margin-top: 5px;
     margin-left: 5px;
 }
 
-/* Dropdown button on hover & focus */
-/* .dropbtn:hover, .dropbtn:focus {
-    background-color: none;
-    border-bottom: solid;
-    border-color: #3d3d3d;
-} */
 
 /* The search field */
 #myInput {
@@ -176,61 +164,6 @@ nav {
 .show {display:block;}
 
 
-  /* -------------------------- css for the dropdown menu --------------------------------/
-/* 
-   The container <div> - needed to position the dropdown content 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: 28.2638%;
-  }
-
-   Dropdown Content (Hidden by Default) 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #FFFFFF;
-    min-width: 160px;
-
-
-    z-index: 1;
-  }
-
-  .dropbtn {
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFFFFF;
-    color: #464646;
-    font-size: 36px;
-    margin-top: 210px;
-    font-weight: 300;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-  }
-
-
-   Links inside the dropdown 
-  .dropdown-content a {
-    font-family: 'Roboto', sans-serif;
-    color: #6F6F6F;
-    margin-top: 12px;
-    text-decoration: none;
-    display: block;
-  }
-
-   Change color of dropdown links on hover 
-  .dropdown-content a:hover {background-color: #EDF0F1}
-
-   Show the dropdown menu on hover 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-   Change the background color of the dropdown button when the dropdown content is shown 
-  .dropdown:hover .dropbtn {
-    background-color: #FFFFFF;
-  } */
-
 /*-------------------------------------------------------- DRAWING BUTTONS CSS ----------------------------------------------------------*/
 
 .canvasAndTools{
@@ -239,42 +172,45 @@ nav {
 }
 
 .controls{
-    margin-top: 70px;
+    margin-top: 0px;
     margin-left: 22.222222222222222222222222222222%;
+    
 }
 
 #colorpicker{
     position: absolute;
     width: 50px;
     height: 50px;
-    margin-top: 100px;
+    margin-top: 75px;
     /* margin-left: 320px; */
     border-radius: 100%;
     border: none;
 
     background-color: black;
+    cursor: pointer;
 }
-
-#colorpicker:hover{
-    outline: 1px solid #000000;
-}
-
+    
 .pencil{
     position: absolute;
     width: 50px;
     height: 50px;
-    margin-top: 150px;
+    margin-top: 142px;
     /* margin-left: 320px; */
     border-radius: 100%;
     border: none;
 
     background-position: center center;
     background-image:url(img/pencil.png);
+    background-size: 80%;
     background-repeat: no-repeat;
+
+    transition: all 0.3s ease-in-out;
+
+    cursor: pointer;
 }
 
-.pencil:hover{
-    outline: 1px solid #000000;
+.pencil:hover{  
+    transform: scale(1.1);
 }
 
 .bucket{
@@ -289,10 +225,13 @@ nav {
     background-position: center center;
     background-image:url(img/bucket.png);
     background-repeat: no-repeat;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .bucket:hover{
-    outline: 1px solid #000000;
+    transform: scale(1.1);
 }
 
 .erasor{
@@ -307,10 +246,13 @@ nav {
     background-position: center center;
     background-image:url(img/erasor.png);
     background-repeat: no-repeat;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .erasor:hover{
-    outline: 1px solid #000000;
+    transform: scale(1.1);
 }
 
 #backward{
@@ -325,10 +267,13 @@ nav {
     background-position: center center;
     background-image:url(img/backward.png);
     background-repeat: no-repeat;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 #backward:hover{
-    outline: 1px solid #000000;
+    transform: scale(1.1);
 }
 
 .forward{
@@ -344,10 +289,12 @@ nav {
     background-image: url(img/forward.png);
     background-repeat: no-repeat;
 
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .forward:hover{
-    outline: 1px solid #000000;
+    transform: scale(1.1);
 }
 
 #trash{
@@ -362,10 +309,13 @@ nav {
     background-position: center center;
     background-image:url(img/trash.png);
     background-repeat: no-repeat;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 #trash:hover{
-    outline: 1px solid #000000;
+    transform: scale(1.1);
 }
 
 
@@ -381,6 +331,7 @@ nav {
     font-size: 18px;
 
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
     
 }
 
@@ -393,6 +344,7 @@ nav {
     font-family: 'Roboto', sans-serif;
     color: #6f6f6f;
     font-size: 18px;
+    cursor: pointer;
 }
 
 /*-------------------------------------------------------- DRAWING CANVAS CSS ----------------------------------------------------------*/
@@ -442,6 +394,11 @@ nav {
 
 #closingButton{
 
+    margin-top: 8px;
+    margin-left: 97%;
+    font-size: 18px;
+
+    border: none;
 }
 
 #submitTitle{
@@ -505,4 +462,68 @@ nav {
 
 #b{
     font-weight: 500;
+}
+
+
+
+#colorChange{
+
+    position: absolute;
+    margin-top: 75px;
+
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 50px;
+	height: 50px;
+    padding: 0px;
+
+    border-radius: 100%;
+
+    opacity: 0;
+    cursor: pointer;
+}
+
+.lineWidthChanger{
+ 
+    position: absolute;
+
+    margin-top: 158px;
+    margin-left: -150px;
+
+}
+ 
+input[type="range"] {
+
+	display: none;
+}
+
+#description{
+    position: absolute;
+    top: 80px;
+    left: 64%;
+    font-weight: 300;
+    font-family:  sans-serif;
+    color: #6f6f6f;
+}
+
+/* #description h2{
+    position: absolute;
+    top: 80px;
+    left: 64%;
+    font-weight: 200;
+    font-family:  sans-serif;
+    color: #6f6f6f;
+} */
+
+#warningPickPrompt{
+    position: absolute;
+    z-index: 100000;
+    left: 42%;
+    top: 2000%;
+    font-weight: 300;
+    font-family:  sans-serif;
+    color: #6f6f6f;
 }

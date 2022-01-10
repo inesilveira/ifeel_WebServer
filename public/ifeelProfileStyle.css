@@ -66,10 +66,11 @@ nav {
 .identifier h1{
   
   font-family: 'Encode Sans', sans-serif;
-  font-style: normal;
+  /*font-style: normal;*/
   font-size: 132px;
-  line-height: 158px;
-  color: #3D3D3D;
+  font-weight: 300;
+  /*line-height: 158px;*/
+  color: black;
     
 }
 
@@ -255,6 +256,7 @@ nav {
   display: block;
   cursor: pointer;
   border-radius: 6px;
+  font-weight: lighter;
 
 }
 .dropdown-content2 a {
@@ -267,12 +269,14 @@ nav {
   display: block;
   cursor: pointer;
   border-radius: 6px;
+  font-weight: lighter;
 
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #acacac}
 
+.dropdown-content2 a:hover {background-color: #acacac}
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
@@ -400,11 +404,11 @@ nav {
   margin: 5%; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 25%; /* Could be more or less, depending on screen size */
+  width: 22%; /* Could be more or less, depending on screen size */
   height: 600px;
   border-radius: 6px;
   position: absolute;
-  right: 220px;
+  right: 300px;
   top:50px;
 }
 
@@ -417,7 +421,7 @@ nav {
   height: 600px;
   border-radius: 6px;
   position: absolute;
-  left: 220px;
+  left: 300px;
   top:50px;
 }
 
@@ -463,10 +467,10 @@ nav {
   display: inline-block;
 
   
-  width: 25%;
-  height: 5%;
+  width: 87px;
+  height: 37px;
   position: absolute;
-  left: 40%;
+  left: 50%;
   top: 92%;
   
 
@@ -478,7 +482,7 @@ nav {
   background-color: rgba(0,0,0,0.2);
 } 
 
-#submitPop {
+#delPop {
   cursor: pointer;
   background-color: white;
   border-color: #6F6F6F;
@@ -488,10 +492,10 @@ nav {
   display: inline-block;
 
   
-  width: 25%;
-  height: 5%;
+  width: 87px;
+  height: 37px;
   position: absolute;
-  left: 70%;
+  left: 75%;
   top: 92%;
   
 
@@ -499,7 +503,7 @@ nav {
   font-size: medium;
 }
 
-#submitPop:hover {
+#delPop:hover {
   background-color: rgba(0,0,0,0.2);
 } 
 
@@ -525,6 +529,19 @@ nav {
   top:15%;
 }
 
+#promptTxt {
+  position: absolute;
+  top: 20%;
+
+  font-family: 'Roboto light', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #6F6F6F;
+
+}
+
 #tgsTitle {
   top:30%;
 }
@@ -547,58 +564,13 @@ nav {
   color: #6F6F6F;
 
 }
+
+
+
+
 #pstTitle {
   top:50%;
 }
-
-/*-------------------------EXPERIMENTATION POPUP STYLE------------------------------*/
-
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.click {
-  position: absolute;
-  top:20px;
-  left:200px;
-  z-index: 1000;
-}
-
-
 
 /*-------------------------SWITCH STYLE------------------------------*/
 
@@ -644,11 +616,11 @@ nav {
 }
 
 input:checked + .slider {
-  background-color: #BDECB6;
+  background-color: #48ab05;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #BDECD6;
+  box-shadow: 0 0 1px #48ab05;
 }
 
 input:checked + .slider:before {
@@ -665,3 +637,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
