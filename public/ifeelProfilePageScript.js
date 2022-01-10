@@ -1,13 +1,18 @@
 
+
+
+//In case we would need to access the data in an array format:
 var gnArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]; //Array storing the ID's 
-var imgArray = ["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Image3.jpeg')",
-"url('img/Image4.jpeg')"]; //Array storing the images
-var dateArray = ["November 21th, 2021", "November 22th, 2021", "November 23th, 2021"];
-var tagsArray = ["happy", "sad", "nostalgic"];
-var promptArray = ["How you feel toda", "Your good traits", "Something that you love"];
+var imgArray = ["url('img/Image1.png')","url('img/Image2.png')", "url('img/Image3.png')",
+"url('img/Image4.png')"]; //Array storing the images
+var dateArray = ["January 10th, 2021", "December 28th, 2021", "December 5th, 2021", "November 15th, 2021"];
+var tagsArray = ["happy", "sad", "proud", "nostalgic"];
+var promptArray = ["How you feel todaY", "Your good traits", "Something that you love", "Something that annoys you"];
+
+
 var currentId; //Variable storing the ID of the image clicked 
 
-//possible array of objects for each post data
+//Array of objects for each post 
 var objArray = [
   {
     "image": "url('img/Image1.png')",
@@ -50,17 +55,6 @@ window.onload = function() {
   
   //---------LOOP TO CREATE THE IMAGES--------------------
 
-  //Option 1
-  /*
-  for(let i = 0; i < gnArray.length; i++){
-    var newImg = original.cloneNode(true);
-    var newAppend = parent.appendChild(newImg);
-    newImg.id = i + 2;
-    newImg.innerHTML = newImg.id;
-    //objArray.push(newImg);
-  }*/
-
-  //Option 2
   for(let i = 0; i < imgArray.length - 1; i++){
     var newImg = original.cloneNode(true);
     var newAppend = parent.appendChild(newImg);
@@ -111,23 +105,9 @@ function closePop(){
   document.getElementById('square1').style.visibility = "hidden";
 }
 
-//document.getElementsByClass("grid-item").onclick = showPop();
 
+//-------------DROPDOWN MENU UPDATE--------------------
 
-
-/*
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-*/
-
-
-//-------------DROPDOWN MENU UPDATE---------------------------------------------
-
- 
 function showDrop() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -137,6 +117,9 @@ function showDrop2() {
 }
 
 
+
+//-------------FILTERS FUNCTIONALITY--------------------
+
 function filterFunction() {
   var input, filter, ul, li, a, i;
   input = document.getElementsByClassName("Input");
@@ -145,6 +128,8 @@ function filterFunction() {
   a = div.getElementsByTagName("a");
   
   
+
+//-------------DROPDOWN FUNCTIONALITY--------------------
 
   for (i = 0; i < a.length; i++) {
     txtValue = a[i].textContent || a[i].innerText;
@@ -156,13 +141,6 @@ function filterFunction() {
       a[i].style.display = "none";
     }
   }
-
-  // var e = document.getElementById("myDropdown");
-  // var value = e.options[e.selectedIndex].value;
-  // var text = e.options[e.selectedIndex].text;
-
-  // console.log(text);
-
 }
 
 function changePrompt(){

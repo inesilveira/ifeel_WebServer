@@ -30,8 +30,6 @@
                 </nav>
         
             </header>
-
-            
     
             <!--------------------------------------------------- BODY HTML ------------------------------------------------------->
 
@@ -40,7 +38,8 @@
             <div class="identifier" id="new">
                 <h1 id="User"></h1>
             </div>
-      
+            
+            <!--------LOG IN FUNCTIONALITY--------->
             <script>
                 document.getElementById('User').innerHTML = name;
                 if(name != ""){
@@ -53,25 +52,11 @@
             <!--------DROPDOWN MENUS--------->
 
             <div class="dropdown">
-                <!-- <div class="dropbtn"> 
-                    <p>draw how you feel today</p>
-                    <button onclick="myFunction()" ></button>  
-                </div> -->
+
                 <button onclick="showDrop()" class="dropbtn"> <div id="promptToChange"> Press me to filter by prompt </div> <img style="align-self: bottom;" id="dropdownimg" src="img/filter.png" alt="drop" width="16" height="10"></button>
                 <div id="myDropdown" class="dropdown-content">
                     
                     <input type="text" placeholder="Search.." class="Input" id="myInput" onkeyup="filterFunction()">
-                    
-                    <!-- <option value="1">Draw how you feel today.</option>
-                    <option value="2">Draw your good traits.</option>
-                    <option value="3">Draw yourself in the past, present and future..</option>
-                    <option value="4">Describe your day using colors.</option>
-                    <option value="5">Draw something that you love.</option>
-                    <option value="6">Draw a problem that you are currently dealing with.</option>
-                    <option value="7">Draw the positive things in your life.</option>
-                    <option value="8">Draw something that frustrates/annoys you.</option>
-                    <option value="9">Draw something that you feel is missing within you.</option>
-                    <option value="10">Draw something you would do if you weren’t scared.</option> -->
 
                     <a onclick="changePrompt();showDrop()" id="prompt">How you feel today.</a>
                     <a onclick="changePrompt();showDrop()" id="prompt">Your good traits.</a>
@@ -88,10 +73,6 @@
             </div>
 
             <div class="dropdown2">
-                <!-- <div class="dropbtn"> 
-                    <p>draw how you feel today</p>
-                    <button onclick="myFunction()" ></button>  
-                </div> -->
                 <button onclick="showDrop2()" class="dropbtn2"> <div id="tagToChange"> Press me to filter by tag </div> <img style="align-self: bottom;" id="dropdownimg2" src="img/filter.png" alt="drop" width="16" height="10"></button>
                 <div id="myDropdown2" class="dropdown-content2">
                     <input type="text" placeholder="Search.." class="Input" id="myInput2" onkeyup="filterFunction()">
@@ -103,27 +84,6 @@
                     
                 </div>
             </div>
-
-            <!--<div class="menus">
-                <div class="menu1">
-                    <label for="prompt"></label>
-                        <select name="prompt" id="prompt">
-                            <option value="feel" selected>Draw how you feel today...</option>
-                            <option value="past">Draw your past...</option>
-                            <option value="calming colours">Use colours that calm you...</option>
-                            <option value="energy">Draw your energy...</option>
-                        </select>
-                </div>
-                <div class="menu2">
-                    <label for="tags"></label>
-                    <select name="tags" id="tags">
-                        <option value="#tag" selected>#Tag</option>
-                        <option value="happy">Happy</option>
-                        <option value="dark">Dark</option>
-                        <option value="calming">Calming</option>
-                        <option value="nostalgic">Nostalgic</option>
-                    </select>     
-                </div>-->
 
                 <!--------BUTTON TO CLEAR THE FILTERS--------->
                 <a class="clear" onclick="clearFilter()">Clear Filters</a> 
@@ -140,14 +100,6 @@
 
 
             <!--------POPUP WINDOW--------->
-
-             <!--
-            <div class="popup">
-                <span class="popuptext" id="myPopup">A simple Popup!</span>
-            </div>
-            -->
-            
-            <!-- Trigger/Open The Modal -->
 
             <div class="popup" id="square1">
                 <div class="popupImgContainer">
@@ -175,18 +127,6 @@
                     <button id="delPop">Delete</button>
                 </div>
             </div>
-
-            <!-- The Modal 
-
-            <div id="myModal" class="modal">
-                 
-                <div class="modal-content">
-                  <span class="close" onclick="spanClick()">&times;</span>
-                  <p>This is a popup!</p>
-                </div>
-
-            </div>
-            -->
 
             <div id="overlay">
                 <div class="logIn">

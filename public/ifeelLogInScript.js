@@ -1,3 +1,4 @@
+
 var x= document.getElementById("login");
 var y= document.getElementById("register");
 var z= document.getElementById("btn");
@@ -5,6 +6,7 @@ var z= document.getElementById("btn");
 var name;
 var logged = false;
 
+//Functions to move in the selected box 
 function moveRegister(){
     x.style.left = "-400px";
     y.style.left = "50px";
@@ -17,6 +19,7 @@ function moveLogin(){
     z.style.left = "0px"; 
 }
 
+//Function to acess the log in input values
 function getInfo() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
@@ -25,6 +28,7 @@ function getInfo() {
     logged = true;
 }
 
+//Function to acess the register input values
 function getReg() {
     var username1 = document.getElementById("username1").value;
     var password1 = document.getElementById("password1").value;
@@ -34,7 +38,6 @@ function getReg() {
     console.log(username1);
 }
 
-console.log(name);
 
 if(logged == false){
     //document.getElementById("LoginRef").href="ifeelLogInPage.html"; 
