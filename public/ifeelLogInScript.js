@@ -27,12 +27,21 @@ function getReg() {
     var username1 = document.getElementById("username1").value;
     var password1 = document.getElementById("password1").value;
     var email = document.getElementById("email").value;
-    alert('Welcome ' + email);
+    alert('Welcome ' + username1);
+    name = username1;
+    console.log(username1);
 }
 
 console.log(name);
 
-
+if(name === ""){
+    //document.getElementById("LoginRef").href="ifeelLogInPage.html"; 
+    console.log("empty");
+}
+else{
+    //document.getElementById("LoginRef").href="ifeelProfilePage.html";
+    console.log("filled");
+}
 
 
 

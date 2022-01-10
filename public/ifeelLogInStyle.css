@@ -8,6 +8,54 @@
     background: transparent;
 }
 
+/*-------------------------NAVBAR STYLE------------------------------*/
+header {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 60px;
+  }
+  
+  .logo{
+    cursor: pointer;
+    margin-left:2%;
+    margin-right: auto;
+  }
+  
+  nav {
+    order: 1;
+  }
+  
+  .nav__links {
+    list-style: none;
+  }
+  
+  .nav__links li{
+    display: inline-block;
+    padding-right: 32px;
+  }
+  
+  .nav__links li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #6F6F6F;
+    text-decoration: none;
+    transition: all 0.03s ease 0s;
+  }
+  
+  .start{
+    font-weight: bold;
+  }
+  
+  .nav__links li a:hover{
+    color: #464646;
+  }
+
+  
+
 .hero{
     top: 0;
     width: 100%;
