@@ -1,3 +1,10 @@
+// const { save } = require("debug/src/browser");
+
+/*  STORE THE USER ID WHEN LOGGING IN ---- MOVE THIS TO THE LOGIN PAGE JS ----- */
+function login(){
+  sessionStorage.setItem('userid', 1);
+} 
+
 var drawing = false;
 var context;
 
@@ -7,20 +14,44 @@ var y;
 var w = window.innerWidth;
 var h = window.innerHeight;
 
-window.onload=function(){
+//--------------------------- CREATE THE PROMPTS TEXT ---------------------
+function createPromptHTML(prompt) {
+  return "<a onclick='changePrompt(); myFunction()'; id='prompt' tag='" + prompt.promptid + "'>" + prompt.prompt_txt + "</a>";
+}
+
+
+//--------------------------- ON LOAD FUNCTIONS ---------------------
+
+window.onload= async function(){
+
+  let promptsDropdown = document.getElementById("myDropdown");
+
+  login();
+
+  try {
+      let prompts = await $.ajax({
+          url: "/api/Prompt",
+          method: "get",
+          dataType: "json"
+      });
+      let html = "";
+      console.log("[prompts] prompts = " + JSON.stringify(prompts));
+      for (let prompt of prompts) {
+          console.log("[prompts] prompts = " + JSON.stringify(prompt));
+          html += createPromptHTML(prompt);
+      }
+      promptsDropdown.innerHTML += html;
+
+  } catch (err) {
+      console.log(err);
+  }
+
 
   //Clear Button
   document.getElementById('trash').addEventListener('click', function(){
     context.clearRect(0,0, context.canvas.width, context.canvas.height);       
   }, false);
-  
-  //Back Button
-  // document.getElementById('backward').addEventListener('click', function(){
-  //   document.getElementById('myCanvas').style.display = "block";
-  //   document.getElementById('saveArea').style.display = "none";
-  //   document.getElementById('tools').style.display = "block";
-  // }, false);
-  
+   
   //Width Scale
   document.getElementById('lineWidth').addEventListener('change', function(){
     context.lineWidth = document.getElementById('lineWidth').value;
@@ -30,22 +61,9 @@ window.onload=function(){
   document.getElementById('colorChange').addEventListener('change', function(){
     context.strokeStyle = document.getElementById('colorChange').value;
   }, false);
-
-  
-  //Save
-  // document.getElementById('btnSave').addEventListener('click', function(){
-  //   document.getElementById('myCanvas').style.display = "none";
-  //   document.getElementById('saveArea').style.display = "block";
-  //   document.getElementById('tools').style.display = "none";
-    
-  //   var dataURL = document.getElementById('myCanvas').toDataURL();
-  //   document.getElementById('canvasImg').src = dataURL;
-  // }, false);
   
   //Size Canvas
   context = document.getElementById('myCanvas').getContext("2d");
-  // context.canvas.width = window.innerWidth;
-  // context.canvas.height = window.innerHeight-60;
   
   //Mouse movement
   document.onmousemove = handleMouseMove;
@@ -53,50 +71,36 @@ window.onload=function(){
   document.onmouseup = handleUp;
   
   //Style line
-  context.strokeStyle = "#000";
+  context.strokeStyle = "#000000";
   context.lineJoin = "round";
-  context.lineWidth = 5;
-  
-  //Hide Save Area
-  document.getElementById('saveArea').style.display = "none";
+  context.lineWidth = 3;
+
 }
 
+
+// ----------------------------------------------------- DRAWING -------------------------------
 function handleDown(e)
 {
     drawing = !drawing; 
     console.log(drawing);
-    context.moveTo(e.clientX - w*0.2109375, e.clientY);
+    context.moveTo(e.clientX, e.clientY);
     context.beginPath();
      
 }
 
 function handleMouseMove(e)
 {
-    // console.log(e.clientX);
-    // console.log(e.clientY);
 
     if(drawing)
     {
        
-        context.lineTo(e.clientX - w*0.2109375/*-205*/, e.clientY - h*0.28723404255319148936170212765957);
+        context.lineTo(e.clientX - w*0.283, e.clientY - h*0.2751);
         context.closePath();
         context.stroke();
-        context.moveTo(e.clientX - w*0.2109375, e.clientY - h*0.28723404255319148936170212765957/*``*/);
+        context.moveTo(e.clientX - w*0.283, e.clientY - h*0.2751 /*``*/);
     }
     
 }
-
-//OVERLAY
-function on() {
-  document.get
-  document.getElementById("overlay").style.display = "block";
-  console.log("bomdia")
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
-
 
 function handleUp()
 {
@@ -109,8 +113,39 @@ function handleUp()
 
 }
 
+// --------------------------------------- OVERLAY ---------------------------------------------
+function on() {
+  document.get
+  document.getElementById("overlay").style.display = "block";
+  console.log("bomdia")
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+var isWidthScaleDisplayed = false;
+
+function showChangeWidthScale() {
+
+  if(isWidthScaleDisplayed == true){
+    document.getElementById("lineWidth").style.display = "none";
+    isWidthScaleDisplayed = false;
+    
+
+  } else if (isWidthScaleDisplayed == false){
+    document.getElementById("lineWidth").style.display = "block";
+    isWidthScaleDisplayed = true;
+  }
+
+}
+
+// --------------------------------------------- DROPDOWN MENU -------------------------------------------------- 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
+
+  document.getElementById("warningPickPrompt").style.display = "none";
+
 }
 
 function filterFunction() {
@@ -129,13 +164,6 @@ function filterFunction() {
       a[i].style.display = "none";
     }
   }
-
-  // var e = document.getElementById("myDropdown");
-  // var value = e.options[e.selectedIndex].value;
-  // var text = e.options[e.selectedIndex].text;
-
-  // console.log(text);
-
 }
 
 function changePrompt(){
@@ -156,11 +184,5 @@ function changePrompt(){
     } 
 
   }, false);
-
-
-   
-  //document.getElementById('promptToChange').innerHTML= prompt.innerText; 
-                                                      //document.getElementById('prompt1').innerText;
-
 
 }
