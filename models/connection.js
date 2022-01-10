@@ -1,6 +1,6 @@
 var pg = require('pg');
 
-const connectionString = "postgres://postgres:Ines2002@localhost:5432/ifeel_database"
+const connectionString = "postgres://postgres:admin@localhost:5432/ifeel_database"
 console.log("connectionString = " + connectionString);
 
 const Pool = pg.Pool
