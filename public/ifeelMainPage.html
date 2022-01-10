@@ -34,24 +34,12 @@
       </ul>
     </nav>
   </header>
+  <!-- <div class = "mouseScroll"><img src="img/MouseScroll.png"></div> -->
 <!------------ BODY - MAIN TEXT ON SCREEN - PROMPT ----------->
 
   <body>
-
-    <!---SIDEBAR ELEMENTS --->
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#" class="shopicon">&nbsp;shop</a>
-      <a href="#" class="instagramicon">&nbsp;instagram</a>
-      <a href="#" class="twittericon">&nbsp;twitter</a>
-      <a href="#" class="youtubeicon">&nbsp;youtube</a>
-      <a href="#" class="facebookicon">&nbsp;facebook</a>
-    </div>
+    <!-- <hr class="verticalLine" width="2" size="10800"> -->
     
-    <!-- button to open sidebar -->
-    <button class="sidebarbutton" onclick="openNav()"></button>
-
-    <!-- MAIN PROMPT-->
     <div class="posPrompt">
       <div class="Prompt">
           <!-- This is the * Main Prompt * on the landing page!!!!!!-->
@@ -66,10 +54,10 @@
 
   <!----------  BODY - AFTER SCROLL ----------->
 
-    <!--Currently this just refreshes the page. Eventually it should randomize prompt-->
     <button class="refresh" onClick="window.location.reload();"></button>
+    <!--Currently this just refreshes the page. Eventually it should randomize prompt-->
 
-    <!-- This is the * Second Prompt * (prompt you see to filter the feed))-->
+
     <div class="secondPrompt">
       <h2 id="promptToChange">HOW YOU FEEL TODAY...</h2>
       <button onclick="myFunction()" class="dropbtn"></button>
@@ -77,8 +65,8 @@
 
   <!----------- BODY - DROPDOWN MENU  ------------>
 
-    <div class="dropdown"> <!--contains everything related to the dropdown-->
-      
+    <div class="dropdown">
+      <!--contains everything related to the dropdown-->
 
       <div id="myDropdown" class="dropdown-content">
         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">

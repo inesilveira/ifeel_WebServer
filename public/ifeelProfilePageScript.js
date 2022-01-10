@@ -1,7 +1,8 @@
 
 var gnArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]; //Array storing the ID's 
 var imgArray = ["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Image3.jpeg')",
-"url('img/Image4.jpeg')"]; //Array storing the images
+"url('img/Image4.jpeg')","url('img/Image5.jpeg')","url('img/Image6.jpeg')","url('img/Image7.jpeg')",
+"url('img/Image8.jpeg')","url('img/Image9.jpeg')","url('img/Image10.jpeg')"]; //Array storing the images
 var dateArray = ["November 21th, 2021", "November 22th, 2021", "November 23th, 2021"];
 var tagsArray = ["happy", "sad", "nostalgic"];
 var promptArray = ["How you feel toda", "Your good traits", "Something that you love"];
@@ -12,31 +13,67 @@ var objArray = [
   {
     "image": "url('img/Image1.png')",
     "id": 2,
-    "date": "January 10th, 2021",
+    "date": "November 21th, 2021",
     "tags": ["happy"],
     "prompt": ["How you feel today"]
   },
   {
-    "image": "url('img/Image2.png')",
+    "image": "url('img/Image2.jpeg')",
     "id": 3,
-    "date": "December 28th, 2021",
-    "tags": ["proud"],
+    "date": "November 22th, 2021",
+    "tags": ["sad"],
     "prompt": ["Your good traits"]
   }, 
   {
-    "image": "url('img/Image3.png')",
+    "image": "url('img/Image3.jpeg')",
     "id": 4,
-    "date": "December 5th, 2021",
+    "date": "November 23th, 2021",
     "tags": ["nostalgic"],
     "prompt": ["Something that you love"]
   },   
   {
-    "image": "url('img/Image4.png')",
+    "image": "url('img/Image4.jpeg')",
     "id": 5,
-    "date": "November 15th, 2021",
-    "tags": ["sad"],
-    "prompt": ["Something that annoys you"]
+    "date": "November 24th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
   },
+  {
+    "image": "url('img/Image5.jpeg')",
+    "id": 6,
+    "date": "November 25th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image6.jpeg')",
+    "id": 7,
+    "date": "November 26th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image7.jpeg')",
+    "id": 8,
+    "date": "November 27th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image8.jpeg')",
+    "id": 9,
+    "date": "November 28th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  },
+  {
+    "image": "url('img/Image9.jpeg')",
+    "id": 10,
+    "date": "November 29th, 2021",
+    "tags": ["nostalgic"],
+    "prompt": ["Something that you love"]
+  }
+    
 ] 
 
 //console.log(objArray[0].id);
@@ -61,10 +98,11 @@ window.onload = function() {
   }*/
 
   //Option 2
-  for(let i = 0; i < imgArray.length - 1; i++){
+  for(let i = 0; i < gnArray.length; i++){
     var newImg = original.cloneNode(true);
     var newAppend = parent.appendChild(newImg);
     newImg.id = i + 2;
+    newImg.innerHTML = newImg.id;
 
     var newPost = {
       "image": objArray[i].image,
@@ -84,7 +122,7 @@ window.onload = function() {
 function replyClick(clicked_id){
   console.log(clicked_id);
   currentId = clicked_id;
-  document.getElementById("popupImg").style.backgroundImage = objArray[clicked_id - 1].image;
+  document.getElementById("popupImg").style.backgroundImage = imgArray[clicked_id - 1];
   document.getElementById("dateTxt").textContent = objArray[clicked_id - 1].date;
   document.getElementById("tagsTxt").textContent = objArray[clicked_id - 1].tags;
   document.getElementById("promptTxt").textContent = objArray[clicked_id - 1].prompt;
