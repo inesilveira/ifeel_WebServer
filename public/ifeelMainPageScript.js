@@ -1,6 +1,15 @@
 
 //-------- | This is the ifeel Main Page JS File |---------//
 
+
+function login(){
+  sessionStorage.setItem('userid', 1);
+}
+
+function createPromptHTML(prompt) {
+  return "<a onclick='changePrompt(); myFunction()'; id='prompt' tag='" + prompt.promptid + "'>" + prompt.prompt_txt + "</a>";
+}
+
 //--Side bar
 /* This opens the sidebar. Sets the width of the side navigation to 250px */
 function openNav() {
@@ -63,10 +72,10 @@ const imageArray =["url('img/Image1.png')","url('img/Image2.png')", "url('img/Im
 ,"url('img/Image12.png')","url('img/Image13.png')"];
 
 
-window.onload = function() {
-const gridArray = [2,3,4,5,6,7,8,9,10,11,12,13]; //Array that contains the grid items. Eventually this would need to be updated automatically when users post.
-var originalcontainer = document.getElementById('container'); // The grid container.
-var originalgrid = document.getElementById('1'); // The original grid element that is duplicated every time. 
+window.onload = async function() {
+  const gridArray = [2,3,4,5,6,7,8,9,10,11,12,13]; //Array that contains the grid items. Eventually this would need to be updated automatically when users post.
+  var originalcontainer = document.getElementById('container'); // The grid container.
+  var originalgrid = document.getElementById('1'); // The original grid element that is duplicated every time. 
 
   for (var i = 0; i < gridArray.length; i++){ // The loop that clones the original grid item according to the Array. 
     var newPost = originalgrid.cloneNode(true);
@@ -78,6 +87,30 @@ var originalgrid = document.getElementById('1'); // The original grid element th
   for(var i = 0; i < imageArray.length; i++){
     document.getElementById(i+1).style.backgroundImage = imageArray[i]; // adds the image to the grid items. 
   }
+
+  //AJAX CODE FOR THE PROMPTS
+
+  let promptsDropdown = document.getElementById("myDropdown");
+
+  login();
+  try {
+      let prompts = await $.ajax({
+          url: "/api/Prompt",
+          method: "get",
+          dataType: "json"
+      });
+      let html = "";
+      console.log("[prompts] prompts = " + JSON.stringify(prompts));
+      for (let prompt of prompts) {
+          console.log("[prompts] prompts = " + JSON.stringify(prompt));
+          html += createPromptHTML(prompt);
+      }
+      promptsDropdown.innerHTML += html;
+
+  } catch (err) {
+      console.log(err);
+  }
+
 }
 
 var currentId; // Stores the id that is clicked on. 
