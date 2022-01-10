@@ -40,10 +40,16 @@
             <div class="identifier" id="new">
                 <h1 id="User"></h1>
             </div>
-            
+      
             <script>
                 document.getElementById('User').innerHTML = name;
+                if(name != ""){
+                    document.getElementById("LoginRef").href="ifeelProfilePage.html";
+                    document.getElementById("LoginRef").innerHTML=name;
+                }
             </script>
+
+
             <!--------DROPDOWN MENUS--------->
 
             <div class="dropdown">

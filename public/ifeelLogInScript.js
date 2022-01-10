@@ -3,6 +3,7 @@ var y= document.getElementById("register");
 var z= document.getElementById("btn");
 
 var name;
+var logged = false;
 
 function moveRegister(){
     x.style.left = "-400px";
@@ -21,6 +22,7 @@ function getInfo() {
     var password = document.getElementById("password").value;
     alert('Welcome ' + username + '!');
     name = username;
+    logged = true;
 }
 
 function getReg() {
@@ -34,13 +36,16 @@ function getReg() {
 
 console.log(name);
 
-if(name === ""){
+if(logged == false){
     //document.getElementById("LoginRef").href="ifeelLogInPage.html"; 
     console.log("empty");
 }
-else{
+else if(logged){
     //document.getElementById("LoginRef").href="ifeelProfilePage.html";
     console.log("filled");
+}
+else{
+    console.log("not defined");
 }
 
 

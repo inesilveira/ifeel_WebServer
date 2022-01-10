@@ -84,7 +84,7 @@ window.onload = function() {
 function replyClick(clicked_id){
   console.log(clicked_id);
   currentId = clicked_id;
-  document.getElementById("popupImg").style.backgroundImage = imgArray[clicked_id - 1];
+  document.getElementById("popupImg").style.backgroundImage = objArray[clicked_id - 1].image;
   document.getElementById("dateTxt").textContent = objArray[clicked_id - 1].date;
   document.getElementById("tagsTxt").textContent = objArray[clicked_id - 1].tags;
   document.getElementById("promptTxt").textContent = objArray[clicked_id - 1].prompt;
