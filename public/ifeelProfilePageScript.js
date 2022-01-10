@@ -5,10 +5,13 @@ var imgArray = ["url('img/Image1.png')","url('img/Image2.jpeg')", "url('img/Imag
 "url('img/Image8.jpeg')","url('img/Image9.jpeg')","url('img/Image10.jpeg')"]; //Array storing the images
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 var dateArray = ["November 21th, 2021", "November 22th, 2021"];
 var tagsArray = ["happy", "sad"];
 var promptArray = ["Draw how you feel today", "Draw your future"];
 =======
+=======
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 var dateArray = ["November 21th, 2021", "November 22th, 2021", "November 23th, 2021"];
@@ -25,8 +28,11 @@ var objArray = [
     "date": "November 21th, 2021",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "tags": ["happy"]
 =======
+=======
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
     "tags": ["happy"],
@@ -39,8 +45,11 @@ var objArray = [
     "date": "November 22th, 2021",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "tags": ["sad"]
 =======
+=======
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
     "tags": ["sad"],
@@ -53,9 +62,12 @@ var objArray = [
     "date": "November 23th, 2021",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "tags": ["sad"]
   },   
 =======
+=======
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
     "tags": ["nostalgic"],
@@ -75,6 +87,7 @@ var objArray = [
     "tags": ["nostalgic"],
     "prompt": ["Something that you love"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   {
     "image": "url('img/Image6.jpeg')",
@@ -94,6 +107,10 @@ var objArray = [
 =======
   },
   {
+=======
+  },
+  {
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
     "image": "url('img/Image6.jpeg')",
     "id": 7,
     "date": "November 26th, 2021",
@@ -108,6 +125,9 @@ var objArray = [
     "prompt": ["Something that you love"]
   },
   {
+<<<<<<< HEAD
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
+=======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
     "image": "url('img/Image8.jpeg')",
     "id": 9,
@@ -124,6 +144,9 @@ var objArray = [
   }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
+=======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
 =======
 >>>>>>> parent of 25c5ad1 (Merge branch 'main' into Pedro)
