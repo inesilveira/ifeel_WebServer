@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile Page</title>
         <link rel="StyleSheet" type="text/css" href="ifeelProfileStyle.css">
         <script src="ifeelProfilePageScript.js"></script>  
-        <script src="ifeelLogInScript.js"></script> 
         <!--<link rel="ifeelProfileStyle" href="https://fonts.googleapis.com/css?family=Encode+Sans|Roboto">-->
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -24,26 +22,21 @@
                 <nav>
                     <ul class="nav__links">
                         <li><a href="ifeelAboutPage.html">about us</a></li>
-                        <li><a href="ifeelLogInPage.html">log in</a></li>
+                        <li><a href="ifeelProfilePage.html">log in</a></li>
                         <li><a class="start" href="ifeelDrawingPage.html">start drawing</a></li>
                     </ul>
                 </nav>
         
             </header>
-
-            
     
             <!--------------------------------------------------- BODY HTML ------------------------------------------------------->
 
             <!--------USERS NAME--------->
 
             <div class="identifier" id="new">
-                <h1 id="User"></h1>
+                <h1>Jack Sparrow</h1>
             </div>
             
-            <script>
-                document.getElementById('User').innerHTML = name;
-            </script>
             <!--------DROPDOWN MENUS--------->
 
             <div class="dropdown">
@@ -51,9 +44,8 @@
                     <p>draw how you feel today</p>
                     <button onclick="myFunction()" ></button>  
                 </div> -->
-                <button onclick="showDrop()" class="dropbtn"> <div id="promptToChange"> Press me to filter by prompt </div> <img style="align-self: bottom;" id="dropdownimg" src="img/filter.png" alt="drop" width="16" height="10"></button>
+                <button onclick="showDrop()" class="dropbtn"> <div id="promptToChange"> Press me to filter by prompt. </div> <img style="align-self: bottom;" id="dropdownimg" src="img/filter.png" alt="drop" width="16" height="10"></button>
                 <div id="myDropdown" class="dropdown-content">
-                    
                     <input type="text" placeholder="Search.." class="Input" id="myInput" onkeyup="filterFunction()">
                     
                     <!-- <option value="1">Draw how you feel today.</option>
@@ -67,16 +59,16 @@
                     <option value="9">Draw something that you feel is missing within you.</option>
                     <option value="10">Draw something you would do if you weren’t scared.</option> -->
 
-                    <a onclick="changePrompt();showDrop()" id="prompt">How you feel today.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">Your good traits.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">Yourself in the past, present and future.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">Your day using colors.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">Something that you love.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">A problem that you are currently dealing with.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">The positive things in your life.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">Something that frustrates/annoys y9ou.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">Something that you feel is missing within you.</a>
-                    <a onclick="changePrompt();showDrop()" id="prompt">Something you would do if you weren’t scared.</a> 
+                    <a onclick="changePrompt();showDrop()" id="prompt"> Draw how you feel today.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw your good traits.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw yourself in the past, present and future.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Describe your day using colors.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw something that you love.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw a problem that you are currently dealing with.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw the positive things in your life.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw something that frustrates/annoys y9ou.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw something that you feel is missing within you.</a>
+                    <a onclick="changePrompt();showDrop()" id="prompt">Draw something you would do if you weren’t scared.</a>
 
                 </div>
             </div>
@@ -86,7 +78,7 @@
                     <p>draw how you feel today</p>
                     <button onclick="myFunction()" ></button>  
                 </div> -->
-                <button onclick="showDrop2()" class="dropbtn2"> <div id="tagToChange"> Press me to filter by tag </div> <img style="align-self: bottom;" id="dropdownimg2" src="img/filter.png" alt="drop" width="16" height="10"></button>
+                <button onclick="showDrop2()" class="dropbtn2"> <div id="tagToChange"> Press me to filter by tag. </div> <img style="align-self: bottom;" id="dropdownimg2" src="img/filter.png" alt="drop" width="16" height="10"></button>
                 <div id="myDropdown2" class="dropdown-content2">
                     <input type="text" placeholder="Search.." class="Input" id="myInput2" onkeyup="filterFunction()">
                     
@@ -120,7 +112,7 @@
                 </div>-->
 
                 <!--------BUTTON TO CLEAR THE FILTERS--------->
-                <a class="clear" onclick="clearFilter()">Clear Filters</a> 
+                <a class="clear" onclick="clearFilter()">Clear Filter</a> 
                 
 
         
@@ -165,9 +157,13 @@
                     </div>
 
                     <button id="closePop" onclick="closePop()"></button>
-                    <button id="savePop" onclick="closePop()">Save</button>
-                    <button id="delPop">Delete</button>
+                    <button id="savePop">Save</button>
+                    <button id="submitPop">Submit</button>
+
+                    
+
                 </div>
+                
             </div>
 
             <!-- The Modal 
@@ -182,10 +178,9 @@
             </div>
             -->
 
-            <div id="overlay">
-                <div class="logIn">
-                    <button class="logBut">Log In</button>
-                </div>
+              <!------------JAVASCRIPT EXPERIMENT--------------->
+            <div id="box">                
+                <!-- empty -->
             </div>
 
         </main>
